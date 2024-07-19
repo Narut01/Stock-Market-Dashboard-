@@ -24,7 +24,7 @@ The dashboard includes the following features:
 ## Dashboard Screenshot
 Here is a preview of the Stock Market Dashboard:
 
-![Stock Market Dashboard](images/dashboard.png)
+![Stock Market Dashboard](image.png)
 
 ## Dataset
 The dashboard utilizes a dataset that includes various stock market metrics, such as:
