@@ -1,0 +1,2992 @@
+<?xml version='1.0' encoding='utf-8' ?>
+
+<!-- build 20241.24.0321.1622                               -->
+<workbook original-version='18.1' source-build='2023.3.1 (20233.23.1227.1336)' source-platform='win' version='18.1' xml:base='https://vizhub' xmlns:user='http://www.tableausoftware.com/xml/user'>
+  <document-format-change-manifest>
+    <_.fcp.AccessibleZoneTabOrder.true...AccessibleZoneTabOrder />
+    <_.fcp.AnimationOnByDefault.true...AnimationOnByDefault />
+    <AutoCreateAndUpdateDSDPhoneLayouts />
+    <_.fcp.MarkAnimation.true...MarkAnimation />
+    <_.fcp.ObjectModelEncapsulateLegacy.true...ObjectModelEncapsulateLegacy />
+    <_.fcp.ObjectModelExtractV2.true...ObjectModelExtractV2 />
+    <_.fcp.ObjectModelTableType.true...ObjectModelTableType />
+    <_.fcp.SchemaViewerObjectModel.true...SchemaViewerObjectModel />
+    <SetMembershipControl />
+    <SheetIdentifierTracking />
+    <_.fcp.VConnDownstreamExtractsWithWarnings.true...VConnDownstreamExtractsWithWarnings />
+    <WindowsPersistSimpleIdentifiers />
+    <WorksheetBackgroundTransparency />
+    <ZoneBackgroundTransparency />
+  </document-format-change-manifest>
+  <repository-location derived-from='https://public.tableau.com/workbooks/Stock_Market_Dashboard_BIVA_Project?rev=1.1' id='Stock_Market_Dashboard_BIVA_Project' path='/workbooks' revision='1.2' />
+  <preferences>
+    <preference name='ui.encoding.shelf.height' value='24' />
+    <preference name='ui.shelf.height' value='26' />
+  </preferences>
+  <style>
+    <style-rule element='axis'>
+      <format attr='stroke-color' value='#000000' />
+      <format attr='tick-color' value='#000000' />
+    </style-rule>
+    <style-rule element='worksheet'>
+      <format attr='font-weight' value='bold' />
+      <format attr='color' value='#000000' />
+      <format attr='font-size' value='8' />
+    </style-rule>
+    <style-rule element='gridline'>
+      <format attr='line-visibility' value='off' />
+    </style-rule>
+    <style-rule element='zeroline'>
+      <format attr='line-visibility' value='off' />
+    </style-rule>
+    <style-rule element='title'>
+      <format attr='font-size' value='11' />
+      <format attr='font-weight' value='bold' />
+      <format attr='color' value='#000000' />
+    </style-rule>
+  </style>
+  <datasources>
+    <datasource hasconnection='false' inline='true' name='Parameters' version='18.1'>
+      <aliases enabled='yes' />
+      <column caption='start date' datatype='date' default-format='*m/d/yyyy' name='[Parameter 1]' param-domain-type='range' role='measure' type='quantitative' value='#2016-01-04#'>
+        <calculation class='tableau' formula='#2016-01-04#' />
+        <range max='#2020-04-01#' min='#2016-01-04#' />
+      </column>
+      <column caption='end date' datatype='date' default-format='*m/d/yyyy' name='[Parameter 2]' param-domain-type='range' role='measure' type='quantitative' value='#2020-04-01#'>
+        <calculation class='tableau' formula='#2020-04-01#' />
+        <range max='#2020-04-01#' min='#2016-01-04#' />
+      </column>
+    </datasource>
+    <datasource caption='Apple+ (CompanyDB)' inline='true' name='federated.14ttqj919vql5v1a4mjgi1opb86z' version='18.1'>
+      <connection class='federated'>
+        <named-connections>
+          <named-connection caption='CompanyDB' name='excel-direct.15yubqj1accz6f131itk70977y0x'>
+            <connection class='excel-direct' cleaning='no' compat='no' dataRefreshTime='' filename='C:/Users/Amol/Downloads/CompanyDB.xlsx' interpretationMode='0' server='' validate='no' workgroup-auth-mode='as-is' />
+          </named-connection>
+        </named-connections>
+        <_.fcp.ObjectModelEncapsulateLegacy.false...relation all='true' name='Apple+' type='union'>
+          <columns header='yes'>
+            <column datatype='integer' name='F1' />
+            <column datatype='date' name='Date' />
+            <column datatype='real' name='Open' />
+            <column datatype='real' name='High' />
+            <column datatype='real' name='Low' />
+            <column datatype='real' name='Close' />
+            <column datatype='real' name='Adj Close' />
+            <column datatype='integer' name='Volume' />
+            <column datatype='real' name='MA50' />
+            <column datatype='real' name='MA200' />
+            <column datatype='real' name='Previous day close price' />
+            <column datatype='real' name='Change in price' />
+            <column datatype='real' name='Percent change in price' />
+            <column datatype='integer' name='Previous day volume' />
+            <column datatype='integer' name='Change in volume' />
+            <column datatype='real' name='Percent change in volume' />
+            <column datatype='string' name='Sheet' />
+            <column datatype='string' name='Table Name' />
+          </columns>
+          <relation connection='excel-direct.15yubqj1accz6f131itk70977y0x' name='Apple' table='[Apple$]' type='table'>
+            <columns gridOrigin='A1:P9910:no:A1:P9910:0' header='yes' outcome='6'>
+              <column datatype='integer' name='F1' ordinal='0' />
+              <column datatype='date' name='Date' ordinal='1' />
+              <column datatype='real' name='Open' ordinal='2' />
+              <column datatype='real' name='High' ordinal='3' />
+              <column datatype='real' name='Low' ordinal='4' />
+              <column datatype='real' name='Close' ordinal='5' />
+              <column datatype='real' name='Adj Close' ordinal='6' />
+              <column datatype='integer' name='Volume' ordinal='7' />
+              <column datatype='real' name='MA50' ordinal='8' />
+              <column datatype='real' name='MA200' ordinal='9' />
+              <column datatype='real' name='Previous day close price' ordinal='10' />
+              <column datatype='real' name='Change in price' ordinal='11' />
+              <column datatype='real' name='Percent change in price' ordinal='12' />
+              <column datatype='integer' name='Previous day volume' ordinal='13' />
+              <column datatype='integer' name='Change in volume' ordinal='14' />
+              <column datatype='real' name='Percent change in volume' ordinal='15' />
+            </columns>
+          </relation>
+          <relation connection='excel-direct.15yubqj1accz6f131itk70977y0x' name='Facebook' table='[Facebook$]' type='table'>
+            <columns gridOrigin='A1:P1981:no:A1:P1981:0' header='yes' outcome='6'>
+              <column datatype='integer' name='F1' ordinal='0' />
+              <column datatype='date' name='Date' ordinal='1' />
+              <column datatype='real' name='Open' ordinal='2' />
+              <column datatype='real' name='High' ordinal='3' />
+              <column datatype='real' name='Low' ordinal='4' />
+              <column datatype='real' name='Close' ordinal='5' />
+              <column datatype='real' name='Adj Close' ordinal='6' />
+              <column datatype='integer' name='Volume' ordinal='7' />
+              <column datatype='real' name='MA50' ordinal='8' />
+              <column datatype='real' name='MA200' ordinal='9' />
+              <column datatype='real' name='Previous day close price' ordinal='10' />
+              <column datatype='real' name='Change in price' ordinal='11' />
+              <column datatype='real' name='Percent change in price' ordinal='12' />
+              <column datatype='integer' name='Previous day volume' ordinal='13' />
+              <column datatype='integer' name='Change in volume' ordinal='14' />
+              <column datatype='real' name='Percent change in volume' ordinal='15' />
+            </columns>
+          </relation>
+          <relation connection='excel-direct.15yubqj1accz6f131itk70977y0x' name='Google' table='[Google$]' type='table'>
+            <columns gridOrigin='A1:P3933:no:A1:P3933:0' header='yes' outcome='2'>
+              <column datatype='integer' name='F1' ordinal='0' />
+              <column datatype='date' name='Date' ordinal='1' />
+              <column datatype='real' name='Open' ordinal='2' />
+              <column datatype='real' name='High' ordinal='3' />
+              <column datatype='real' name='Low' ordinal='4' />
+              <column datatype='real' name='Close' ordinal='5' />
+              <column datatype='real' name='Adj Close' ordinal='6' />
+              <column datatype='integer' name='Volume' ordinal='7' />
+              <column datatype='real' name='MA50' ordinal='8' />
+              <column datatype='real' name='MA200' ordinal='9' />
+              <column datatype='real' name='Previous day close price' ordinal='10' />
+              <column datatype='real' name='Change in price' ordinal='11' />
+              <column datatype='real' name='Percent change in price' ordinal='12' />
+              <column datatype='integer' name='Previous day volume' ordinal='13' />
+              <column datatype='integer' name='Change in volume' ordinal='14' />
+              <column datatype='real' name='Percent change in volume' ordinal='15' />
+            </columns>
+          </relation>
+          <relation connection='excel-direct.15yubqj1accz6f131itk70977y0x' name='Nvidia' table='[Nvidia$]' type='table'>
+            <columns gridOrigin='A1:P5335:no:A1:P5335:0' header='yes' outcome='6'>
+              <column datatype='integer' name='F1' ordinal='0' />
+              <column datatype='date' name='Date' ordinal='1' />
+              <column datatype='real' name='Open' ordinal='2' />
+              <column datatype='real' name='High' ordinal='3' />
+              <column datatype='real' name='Low' ordinal='4' />
+              <column datatype='real' name='Close' ordinal='5' />
+              <column datatype='real' name='Adj Close' ordinal='6' />
+              <column datatype='integer' name='Volume' ordinal='7' />
+              <column datatype='real' name='MA50' ordinal='8' />
+              <column datatype='real' name='MA200' ordinal='9' />
+              <column datatype='real' name='Previous day close price' ordinal='10' />
+              <column datatype='real' name='Change in price' ordinal='11' />
+              <column datatype='real' name='Percent change in price' ordinal='12' />
+              <column datatype='integer' name='Previous day volume' ordinal='13' />
+              <column datatype='integer' name='Change in volume' ordinal='14' />
+              <column datatype='real' name='Percent change in volume' ordinal='15' />
+            </columns>
+          </relation>
+          <relation connection='excel-direct.15yubqj1accz6f131itk70977y0x' name='Tesla' table='[Tesla$]' type='table'>
+            <columns gridOrigin='A1:P2458:no:A1:P2458:0' header='yes' outcome='6'>
+              <column datatype='integer' name='F1' ordinal='0' />
+              <column datatype='date' name='Date' ordinal='1' />
+              <column datatype='real' name='Open' ordinal='2' />
+              <column datatype='real' name='High' ordinal='3' />
+              <column datatype='real' name='Low' ordinal='4' />
+              <column datatype='real' name='Close' ordinal='5' />
+              <column datatype='real' name='Adj Close' ordinal='6' />
+              <column datatype='integer' name='Volume' ordinal='7' />
+              <column datatype='real' name='MA50' ordinal='8' />
+              <column datatype='real' name='MA200' ordinal='9' />
+              <column datatype='real' name='Previous day close price' ordinal='10' />
+              <column datatype='real' name='Change in price' ordinal='11' />
+              <column datatype='real' name='Percent change in price' ordinal='12' />
+              <column datatype='integer' name='Previous day volume' ordinal='13' />
+              <column datatype='integer' name='Change in volume' ordinal='14' />
+              <column datatype='real' name='Percent change in volume' ordinal='15' />
+            </columns>
+          </relation>
+          <relation connection='excel-direct.15yubqj1accz6f131itk70977y0x' name='Twitter' table='[Twitter$]' type='table'>
+            <columns gridOrigin='A1:P1611:no:A1:P1611:0' header='yes' outcome='6'>
+              <column datatype='integer' name='F1' ordinal='0' />
+              <column datatype='date' name='Date' ordinal='1' />
+              <column datatype='real' name='Open' ordinal='2' />
+              <column datatype='real' name='High' ordinal='3' />
+              <column datatype='real' name='Low' ordinal='4' />
+              <column datatype='real' name='Close' ordinal='5' />
+              <column datatype='real' name='Adj Close' ordinal='6' />
+              <column datatype='integer' name='Volume' ordinal='7' />
+              <column datatype='real' name='MA50' ordinal='8' />
+              <column datatype='real' name='MA200' ordinal='9' />
+              <column datatype='real' name='Previous day close price' ordinal='10' />
+              <column datatype='real' name='Change in price' ordinal='11' />
+              <column datatype='real' name='Percent change in price' ordinal='12' />
+              <column datatype='integer' name='Previous day volume' ordinal='13' />
+              <column datatype='integer' name='Change in volume' ordinal='14' />
+              <column datatype='real' name='Percent change in volume' ordinal='15' />
+            </columns>
+          </relation>
+        </_.fcp.ObjectModelEncapsulateLegacy.false...relation>
+        <_.fcp.ObjectModelEncapsulateLegacy.true...relation all='true' name='Apple+' type='union'>
+          <columns header='yes'>
+            <column datatype='integer' name='F1' />
+            <column datatype='date' name='Date' />
+            <column datatype='real' name='Open' />
+            <column datatype='real' name='High' />
+            <column datatype='real' name='Low' />
+            <column datatype='real' name='Close' />
+            <column datatype='real' name='Adj Close' />
+            <column datatype='integer' name='Volume' />
+            <column datatype='real' name='MA50' />
+            <column datatype='real' name='MA200' />
+            <column datatype='real' name='Previous day close price' />
+            <column datatype='real' name='Change in price' />
+            <column datatype='real' name='Percent change in price' />
+            <column datatype='integer' name='Previous day volume' />
+            <column datatype='integer' name='Change in volume' />
+            <column datatype='real' name='Percent change in volume' />
+            <column datatype='string' name='Sheet' />
+            <column datatype='string' name='Table Name' />
+          </columns>
+          <relation connection='excel-direct.15yubqj1accz6f131itk70977y0x' name='Apple' table='[Apple$]' type='table'>
+            <columns gridOrigin='A1:P9910:no:A1:P9910:0' header='yes' outcome='6'>
+              <column datatype='integer' name='F1' ordinal='0' />
+              <column datatype='date' name='Date' ordinal='1' />
+              <column datatype='real' name='Open' ordinal='2' />
+              <column datatype='real' name='High' ordinal='3' />
+              <column datatype='real' name='Low' ordinal='4' />
+              <column datatype='real' name='Close' ordinal='5' />
+              <column datatype='real' name='Adj Close' ordinal='6' />
+              <column datatype='integer' name='Volume' ordinal='7' />
+              <column datatype='real' name='MA50' ordinal='8' />
+              <column datatype='real' name='MA200' ordinal='9' />
+              <column datatype='real' name='Previous day close price' ordinal='10' />
+              <column datatype='real' name='Change in price' ordinal='11' />
+              <column datatype='real' name='Percent change in price' ordinal='12' />
+              <column datatype='integer' name='Previous day volume' ordinal='13' />
+              <column datatype='integer' name='Change in volume' ordinal='14' />
+              <column datatype='real' name='Percent change in volume' ordinal='15' />
+            </columns>
+          </relation>
+          <relation connection='excel-direct.15yubqj1accz6f131itk70977y0x' name='Facebook' table='[Facebook$]' type='table'>
+            <columns gridOrigin='A1:P1981:no:A1:P1981:0' header='yes' outcome='6'>
+              <column datatype='integer' name='F1' ordinal='0' />
+              <column datatype='date' name='Date' ordinal='1' />
+              <column datatype='real' name='Open' ordinal='2' />
+              <column datatype='real' name='High' ordinal='3' />
+              <column datatype='real' name='Low' ordinal='4' />
+              <column datatype='real' name='Close' ordinal='5' />
+              <column datatype='real' name='Adj Close' ordinal='6' />
+              <column datatype='integer' name='Volume' ordinal='7' />
+              <column datatype='real' name='MA50' ordinal='8' />
+              <column datatype='real' name='MA200' ordinal='9' />
+              <column datatype='real' name='Previous day close price' ordinal='10' />
+              <column datatype='real' name='Change in price' ordinal='11' />
+              <column datatype='real' name='Percent change in price' ordinal='12' />
+              <column datatype='integer' name='Previous day volume' ordinal='13' />
+              <column datatype='integer' name='Change in volume' ordinal='14' />
+              <column datatype='real' name='Percent change in volume' ordinal='15' />
+            </columns>
+          </relation>
+          <relation connection='excel-direct.15yubqj1accz6f131itk70977y0x' name='Google' table='[Google$]' type='table'>
+            <columns gridOrigin='A1:P3933:no:A1:P3933:0' header='yes' outcome='2'>
+              <column datatype='integer' name='F1' ordinal='0' />
+              <column datatype='date' name='Date' ordinal='1' />
+              <column datatype='real' name='Open' ordinal='2' />
+              <column datatype='real' name='High' ordinal='3' />
+              <column datatype='real' name='Low' ordinal='4' />
+              <column datatype='real' name='Close' ordinal='5' />
+              <column datatype='real' name='Adj Close' ordinal='6' />
+              <column datatype='integer' name='Volume' ordinal='7' />
+              <column datatype='real' name='MA50' ordinal='8' />
+              <column datatype='real' name='MA200' ordinal='9' />
+              <column datatype='real' name='Previous day close price' ordinal='10' />
+              <column datatype='real' name='Change in price' ordinal='11' />
+              <column datatype='real' name='Percent change in price' ordinal='12' />
+              <column datatype='integer' name='Previous day volume' ordinal='13' />
+              <column datatype='integer' name='Change in volume' ordinal='14' />
+              <column datatype='real' name='Percent change in volume' ordinal='15' />
+            </columns>
+          </relation>
+          <relation connection='excel-direct.15yubqj1accz6f131itk70977y0x' name='Nvidia' table='[Nvidia$]' type='table'>
+            <columns gridOrigin='A1:P5335:no:A1:P5335:0' header='yes' outcome='6'>
+              <column datatype='integer' name='F1' ordinal='0' />
+              <column datatype='date' name='Date' ordinal='1' />
+              <column datatype='real' name='Open' ordinal='2' />
+              <column datatype='real' name='High' ordinal='3' />
+              <column datatype='real' name='Low' ordinal='4' />
+              <column datatype='real' name='Close' ordinal='5' />
+              <column datatype='real' name='Adj Close' ordinal='6' />
+              <column datatype='integer' name='Volume' ordinal='7' />
+              <column datatype='real' name='MA50' ordinal='8' />
+              <column datatype='real' name='MA200' ordinal='9' />
+              <column datatype='real' name='Previous day close price' ordinal='10' />
+              <column datatype='real' name='Change in price' ordinal='11' />
+              <column datatype='real' name='Percent change in price' ordinal='12' />
+              <column datatype='integer' name='Previous day volume' ordinal='13' />
+              <column datatype='integer' name='Change in volume' ordinal='14' />
+              <column datatype='real' name='Percent change in volume' ordinal='15' />
+            </columns>
+          </relation>
+          <relation connection='excel-direct.15yubqj1accz6f131itk70977y0x' name='Tesla' table='[Tesla$]' type='table'>
+            <columns gridOrigin='A1:P2458:no:A1:P2458:0' header='yes' outcome='6'>
+              <column datatype='integer' name='F1' ordinal='0' />
+              <column datatype='date' name='Date' ordinal='1' />
+              <column datatype='real' name='Open' ordinal='2' />
+              <column datatype='real' name='High' ordinal='3' />
+              <column datatype='real' name='Low' ordinal='4' />
+              <column datatype='real' name='Close' ordinal='5' />
+              <column datatype='real' name='Adj Close' ordinal='6' />
+              <column datatype='integer' name='Volume' ordinal='7' />
+              <column datatype='real' name='MA50' ordinal='8' />
+              <column datatype='real' name='MA200' ordinal='9' />
+              <column datatype='real' name='Previous day close price' ordinal='10' />
+              <column datatype='real' name='Change in price' ordinal='11' />
+              <column datatype='real' name='Percent change in price' ordinal='12' />
+              <column datatype='integer' name='Previous day volume' ordinal='13' />
+              <column datatype='integer' name='Change in volume' ordinal='14' />
+              <column datatype='real' name='Percent change in volume' ordinal='15' />
+            </columns>
+          </relation>
+          <relation connection='excel-direct.15yubqj1accz6f131itk70977y0x' name='Twitter' table='[Twitter$]' type='table'>
+            <columns gridOrigin='A1:P1611:no:A1:P1611:0' header='yes' outcome='6'>
+              <column datatype='integer' name='F1' ordinal='0' />
+              <column datatype='date' name='Date' ordinal='1' />
+              <column datatype='real' name='Open' ordinal='2' />
+              <column datatype='real' name='High' ordinal='3' />
+              <column datatype='real' name='Low' ordinal='4' />
+              <column datatype='real' name='Close' ordinal='5' />
+              <column datatype='real' name='Adj Close' ordinal='6' />
+              <column datatype='integer' name='Volume' ordinal='7' />
+              <column datatype='real' name='MA50' ordinal='8' />
+              <column datatype='real' name='MA200' ordinal='9' />
+              <column datatype='real' name='Previous day close price' ordinal='10' />
+              <column datatype='real' name='Change in price' ordinal='11' />
+              <column datatype='real' name='Percent change in price' ordinal='12' />
+              <column datatype='integer' name='Previous day volume' ordinal='13' />
+              <column datatype='integer' name='Change in volume' ordinal='14' />
+              <column datatype='real' name='Percent change in volume' ordinal='15' />
+            </columns>
+          </relation>
+        </_.fcp.ObjectModelEncapsulateLegacy.true...relation>
+        <metadata-records>
+          <metadata-record class='capability'>
+            <remote-name />
+            <remote-type>0</remote-type>
+            <parent-name>[Apple+]</parent-name>
+            <remote-alias />
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>F1</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[F1]</local-name>
+            <parent-name>[Apple+]</parent-name>
+            <remote-alias>F1</remote-alias>
+            <ordinal>0</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Apple_8D31A84DA18845F792F2AF3992F617CF]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Date</remote-name>
+            <remote-type>7</remote-type>
+            <local-name>[Date]</local-name>
+            <parent-name>[Apple+]</parent-name>
+            <remote-alias>Date</remote-alias>
+            <ordinal>1</ordinal>
+            <local-type>date</local-type>
+            <aggregation>Year</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Apple_8D31A84DA18845F792F2AF3992F617CF]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Open</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[Open]</local-name>
+            <parent-name>[Apple+]</parent-name>
+            <remote-alias>Open</remote-alias>
+            <ordinal>2</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Apple_8D31A84DA18845F792F2AF3992F617CF]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>High</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[High]</local-name>
+            <parent-name>[Apple+]</parent-name>
+            <remote-alias>High</remote-alias>
+            <ordinal>3</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Apple_8D31A84DA18845F792F2AF3992F617CF]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Low</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[Low]</local-name>
+            <parent-name>[Apple+]</parent-name>
+            <remote-alias>Low</remote-alias>
+            <ordinal>4</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Apple_8D31A84DA18845F792F2AF3992F617CF]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Close</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[Close]</local-name>
+            <parent-name>[Apple+]</parent-name>
+            <remote-alias>Close</remote-alias>
+            <ordinal>5</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Apple_8D31A84DA18845F792F2AF3992F617CF]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Adj Close</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[Adj Close]</local-name>
+            <parent-name>[Apple+]</parent-name>
+            <remote-alias>Adj Close</remote-alias>
+            <ordinal>6</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Apple_8D31A84DA18845F792F2AF3992F617CF]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Volume</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[Volume]</local-name>
+            <parent-name>[Apple+]</parent-name>
+            <remote-alias>Volume</remote-alias>
+            <ordinal>7</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Apple_8D31A84DA18845F792F2AF3992F617CF]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>MA50</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[MA50]</local-name>
+            <parent-name>[Apple+]</parent-name>
+            <remote-alias>MA50</remote-alias>
+            <ordinal>8</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Apple_8D31A84DA18845F792F2AF3992F617CF]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>MA200</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[MA200]</local-name>
+            <parent-name>[Apple+]</parent-name>
+            <remote-alias>MA200</remote-alias>
+            <ordinal>9</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Apple_8D31A84DA18845F792F2AF3992F617CF]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Previous day close price</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[Previous day close price]</local-name>
+            <parent-name>[Apple+]</parent-name>
+            <remote-alias>Previous day close price</remote-alias>
+            <ordinal>10</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Apple_8D31A84DA18845F792F2AF3992F617CF]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Change in price</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[Change in price]</local-name>
+            <parent-name>[Apple+]</parent-name>
+            <remote-alias>Change in price</remote-alias>
+            <ordinal>11</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Apple_8D31A84DA18845F792F2AF3992F617CF]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Percent change in price</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[Percent change in price]</local-name>
+            <parent-name>[Apple+]</parent-name>
+            <remote-alias>Percent change in price</remote-alias>
+            <ordinal>12</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Apple_8D31A84DA18845F792F2AF3992F617CF]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Previous day volume</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[Previous day volume]</local-name>
+            <parent-name>[Apple+]</parent-name>
+            <remote-alias>Previous day volume</remote-alias>
+            <ordinal>13</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Apple_8D31A84DA18845F792F2AF3992F617CF]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Change in volume</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[Change in volume]</local-name>
+            <parent-name>[Apple+]</parent-name>
+            <remote-alias>Change in volume</remote-alias>
+            <ordinal>14</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Apple_8D31A84DA18845F792F2AF3992F617CF]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Percent change in volume</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[Percent change in volume]</local-name>
+            <parent-name>[Apple+]</parent-name>
+            <remote-alias>Percent change in volume</remote-alias>
+            <ordinal>15</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Apple_8D31A84DA18845F792F2AF3992F617CF]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Sheet</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[Sheet]</local-name>
+            <parent-name>[Apple+]</parent-name>
+            <remote-alias>Sheet</remote-alias>
+            <ordinal>16</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RIN' />
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Apple_8D31A84DA18845F792F2AF3992F617CF]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Table Name</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[Table Name]</local-name>
+            <parent-name>[Apple+]</parent-name>
+            <remote-alias>Table Name</remote-alias>
+            <ordinal>17</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RIN' />
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Apple_8D31A84DA18845F792F2AF3992F617CF]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+        </metadata-records>
+      </connection>
+      <aliases enabled='yes' />
+      <column datatype='string' name='[:Measure Names]' role='dimension' type='nominal'>
+        <aliases>
+          <alias key='&quot;[federated.14ttqj919vql5v1a4mjgi1opb86z]&quot;' value='Change in %' />
+        </aliases>
+      </column>
+      <column datatype='real' name='[Adj Close]' role='measure' type='quantitative' />
+      <column aggregation='Sum' caption='Study Period' datatype='integer' name='[Calculation_1311954933860835328]' role='dimension' type='ordinal'>
+        <calculation class='tableau' formula='IF [Date]&gt;=[Parameters].[Parameter 1] and [Date]&lt;=[Parameters].[Parameter 2] THEN 1&#13;&#10;ELSE 0&#13;&#10;END' />
+      </column>
+      <column aggregation='Sum' caption='Last day only' datatype='integer' name='[Calculation_1311954933867307009]' role='dimension' type='ordinal'>
+        <calculation class='tableau' formula='IF [Date] = {FIXED : MAX([Parameters].[Parameter 2])} THEN 1&#13;&#10;ELSE 0&#13;&#10;END' />
+      </column>
+      <column caption='Upper price' datatype='string' name='[Calculation_1311954933870096386]' role='dimension' type='nominal'>
+        <calculation class='tableau' formula='IF [Percent change in price] &gt; 0 THEN &apos;▲&apos; END' />
+      </column>
+      <column caption='Down price' datatype='string' name='[Calculation_1311954933870833667]' role='dimension' type='nominal'>
+        <calculation class='tableau' formula='IF [Percent change in price] &lt; 0 THEN &apos;▼&apos; END' />
+      </column>
+      <column caption='Last day text' datatype='string' name='[Calculation_1311954933887356934]' role='dimension' type='nominal'>
+        <calculation class='tableau' formula='&quot;Last day:&quot;' />
+      </column>
+      <column caption='Last day' datatype='date' name='[Calculation_1311954933887614983]' role='measure' type='ordinal'>
+        <calculation class='tableau' formula='MAX([Parameters].[Parameter 2])' />
+      </column>
+      <column caption='Last day total vol text' datatype='string' name='[Calculation_1311954933889515528]' role='dimension' type='nominal'>
+        <calculation class='tableau' formula='&quot;Last day total volume:&quot;' />
+      </column>
+      <column caption='Lowest price in the period text' datatype='string' name='[Calculation_1311954933890588681]' role='dimension' type='nominal'>
+        <calculation class='tableau' formula='&quot;Lowest price in the period:&quot;' />
+      </column>
+      <column caption='Highest price in the period text' datatype='string' name='[Calculation_1311954933891833866]' role='dimension' type='nominal'>
+        <calculation class='tableau' formula='&quot;Highest price in the period:&quot;' />
+      </column>
+      <column caption='Total volume in the period text' datatype='string' name='[Calculation_1311954933892608011]' role='dimension' type='nominal'>
+        <calculation class='tableau' formula='&quot;Total volume in the period:&quot;' />
+      </column>
+      <column caption='Title' datatype='string' name='[Calculation_1311954933893328908]' role='dimension' type='nominal'>
+        <calculation class='tableau' formula='&quot;Stock Market Dashboard&quot;' />
+      </column>
+      <column datatype='real' name='[Change in price]' role='measure' type='quantitative' />
+      <column datatype='integer' name='[Change in volume]' role='measure' type='quantitative' />
+      <column datatype='real' name='[Close]' role='measure' type='quantitative' />
+      <column datatype='date' name='[Date]' role='dimension' type='ordinal' />
+      <column caption='Down volume' datatype='string' name='[Down price (copy)_1311954933885440004]' role='dimension' type='nominal'>
+        <calculation class='tableau' formula='IF [Percent change in volume] &lt; 0 THEN &apos;▼&apos; END' />
+      </column>
+      <column datatype='integer' name='[F1]' role='measure' type='quantitative' />
+      <column datatype='real' name='[High]' role='measure' type='quantitative' />
+      <column datatype='real' name='[Low]' role='measure' type='quantitative' />
+      <column caption='Ma200' datatype='real' name='[MA200]' role='measure' type='quantitative' />
+      <column caption='Ma50' datatype='real' name='[MA50]' role='measure' type='quantitative' />
+      <column datatype='real' name='[Open]' role='measure' type='quantitative' />
+      <column aggregation='None' datatype='integer' name='[Percent change in price (bin)]' role='dimension' type='quantitative'>
+        <calculation class='bin' decimals='-4' formula='[Percent change in price]' peg='0' size='0.0025' />
+      </column>
+      <column datatype='real' name='[Percent change in price]' role='measure' type='quantitative' />
+      <column datatype='real' name='[Percent change in volume]' role='measure' type='quantitative' />
+      <column datatype='real' name='[Previous day close price]' role='measure' type='quantitative' />
+      <column datatype='integer' name='[Previous day volume]' role='measure' type='quantitative' />
+      <column datatype='string' hidden='true' name='[Sheet]' role='dimension' type='nominal' />
+      <column caption='Company' datatype='string' name='[Table Name]' role='dimension' type='nominal' />
+      <column caption='Upper volume' datatype='string' name='[Upper price (copy)_1311954933885562885]' role='dimension' type='nominal'>
+        <calculation class='tableau' formula='IF [Percent change in volume] &gt; 0 THEN &apos;▲&apos; END' />
+      </column>
+      <column datatype='integer' name='[Volume]' role='measure' type='quantitative' />
+      <_.fcp.ObjectModelTableType.true...column caption='Apple' datatype='table' name='[__tableau_internal_object_id__].[Apple_8D31A84DA18845F792F2AF3992F617CF]' role='measure' type='quantitative' />
+      <column-instance column='[__tableau_internal_object_id__].[Apple_8D31A84DA18845F792F2AF3992F617CF]' derivation='Count' name='[__tableau_internal_object_id__].[cnt:Apple_8D31A84DA18845F792F2AF3992F617CF:qk]' pivot='key' type='quantitative' />
+      <column-instance column='[High]' derivation='Max' name='[max:High:qk]' pivot='key' type='quantitative' />
+      <column-instance column='[Low]' derivation='Min' name='[min:Low:qk]' pivot='key' type='quantitative' />
+      <column-instance column='[Table Name]' derivation='None' name='[none:Table Name:nk]' pivot='key' type='nominal' />
+      <column-instance column='[Adj Close]' derivation='Sum' name='[sum:Adj Close:qk]' pivot='key' type='quantitative' />
+      <column-instance column='[Change in price]' derivation='Sum' name='[sum:Change in price:qk]' pivot='key' type='quantitative' />
+      <column-instance column='[Change in volume]' derivation='Sum' name='[sum:Change in volume:qk]' pivot='key' type='quantitative' />
+      <column-instance column='[Close]' derivation='Sum' name='[sum:Close:qk]' pivot='key' type='quantitative' />
+      <column-instance column='[F1]' derivation='Sum' name='[sum:F1:qk]' pivot='key' type='quantitative' />
+      <column-instance column='[High]' derivation='Sum' name='[sum:High:qk]' pivot='key' type='quantitative' />
+      <column-instance column='[Low]' derivation='Sum' name='[sum:Low:qk]' pivot='key' type='quantitative' />
+      <column-instance column='[MA200]' derivation='Sum' name='[sum:MA200:qk]' pivot='key' type='quantitative' />
+      <column-instance column='[MA50]' derivation='Sum' name='[sum:MA50:qk]' pivot='key' type='quantitative' />
+      <column-instance column='[Open]' derivation='Sum' name='[sum:Open:qk]' pivot='key' type='quantitative' />
+      <column-instance column='[Percent change in price]' derivation='Sum' name='[sum:Percent change in price:qk]' pivot='key' type='quantitative' />
+      <column-instance column='[Percent change in volume]' derivation='Sum' name='[sum:Percent change in volume:qk]' pivot='key' type='quantitative' />
+      <column-instance column='[Previous day close price]' derivation='Sum' name='[sum:Previous day close price:qk]' pivot='key' type='quantitative' />
+      <column-instance column='[Previous day volume]' derivation='Sum' name='[sum:Previous day volume:qk]' pivot='key' type='quantitative' />
+      <column-instance column='[Volume]' derivation='Sum' name='[sum:Volume:qk]' pivot='key' type='quantitative' />
+      <column-instance column='[Date]' derivation='Year' name='[yr:Date:ok]' pivot='key' type='ordinal' />
+      <extract _.fcp.ObjectModelExtractV2.true...object-id='' _.fcp.VConnDownstreamExtractsWithWarnings.true...user-specific='false' count='-1' enabled='true' units='records'>
+        <connection access_mode='readonly' author-locale='en_US' class='hyper' dbname='Data/TableauTemp/#TableauTemp_047mp4z00dz9ra14q7hkw0tq9gz2.hyper' default-settings='hyper' schema='Extract' sslmode='' tablename='Extract' update-time='03/20/2024 05:43:56 PM' username='tableau_internal_user'>
+          <_.fcp.ObjectModelEncapsulateLegacy.false...relation name='Extract' table='[Extract].[Extract]' type='table' />
+          <_.fcp.ObjectModelEncapsulateLegacy.true...relation name='Extract' table='[Extract].[Extract]' type='table' />
+          <metadata-records>
+            <metadata-record class='column'>
+              <remote-name>F1</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[F1]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>F1</remote-alias>
+              <ordinal>0</ordinal>
+              <family>Apple+</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>7218</approx-count>
+              <contains-null>true</contains-null>
+              <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Apple_8D31A84DA18845F792F2AF3992F617CF]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Date</remote-name>
+              <remote-type>133</remote-type>
+              <local-name>[Date]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Date</remote-alias>
+              <ordinal>1</ordinal>
+              <family>Apple+</family>
+              <local-type>date</local-type>
+              <aggregation>Year</aggregation>
+              <approx-count>7341</approx-count>
+              <contains-null>true</contains-null>
+              <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Apple_8D31A84DA18845F792F2AF3992F617CF]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Open</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[Open]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Open</remote-alias>
+              <ordinal>2</ordinal>
+              <family>Apple+</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>7652</approx-count>
+              <contains-null>true</contains-null>
+              <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Apple_8D31A84DA18845F792F2AF3992F617CF]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>High</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[High]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>High</remote-alias>
+              <ordinal>3</ordinal>
+              <family>Apple+</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>8999</approx-count>
+              <contains-null>true</contains-null>
+              <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Apple_8D31A84DA18845F792F2AF3992F617CF]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Low</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[Low]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Low</remote-alias>
+              <ordinal>4</ordinal>
+              <family>Apple+</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>8659</approx-count>
+              <contains-null>true</contains-null>
+              <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Apple_8D31A84DA18845F792F2AF3992F617CF]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Close</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[Close]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Close</remote-alias>
+              <ordinal>5</ordinal>
+              <family>Apple+</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>8335</approx-count>
+              <contains-null>true</contains-null>
+              <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Apple_8D31A84DA18845F792F2AF3992F617CF]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Adj Close</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[Adj Close]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Adj Close</remote-alias>
+              <ordinal>6</ordinal>
+              <family>Apple+</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>11093</approx-count>
+              <contains-null>true</contains-null>
+              <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Apple_8D31A84DA18845F792F2AF3992F617CF]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Volume</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[Volume]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Volume</remote-alias>
+              <ordinal>7</ordinal>
+              <family>Apple+</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>24048</approx-count>
+              <contains-null>true</contains-null>
+              <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Apple_8D31A84DA18845F792F2AF3992F617CF]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>MA50</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[MA50]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>MA50</remote-alias>
+              <ordinal>8</ordinal>
+              <family>Apple+</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>23914</approx-count>
+              <contains-null>true</contains-null>
+              <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Apple_8D31A84DA18845F792F2AF3992F617CF]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>MA200</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[MA200]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>MA200</remote-alias>
+              <ordinal>9</ordinal>
+              <family>Apple+</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>23247</approx-count>
+              <contains-null>true</contains-null>
+              <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Apple_8D31A84DA18845F792F2AF3992F617CF]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Previous day close price</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[Previous day close price]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Previous day close price</remote-alias>
+              <ordinal>10</ordinal>
+              <family>Apple+</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>8472</approx-count>
+              <contains-null>true</contains-null>
+              <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Apple_8D31A84DA18845F792F2AF3992F617CF]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Change in price</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[Change in price]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Change in price</remote-alias>
+              <ordinal>11</ordinal>
+              <family>Apple+</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>5672</approx-count>
+              <contains-null>true</contains-null>
+              <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Apple_8D31A84DA18845F792F2AF3992F617CF]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Percent change in price</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[Percent change in price]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Percent change in price</remote-alias>
+              <ordinal>12</ordinal>
+              <family>Apple+</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>21475</approx-count>
+              <contains-null>true</contains-null>
+              <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Apple_8D31A84DA18845F792F2AF3992F617CF]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Previous day volume</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[Previous day volume]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Previous day volume</remote-alias>
+              <ordinal>13</ordinal>
+              <family>Apple+</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>21698</approx-count>
+              <contains-null>true</contains-null>
+              <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Apple_8D31A84DA18845F792F2AF3992F617CF]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Change in volume</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[Change in volume]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Change in volume</remote-alias>
+              <ordinal>14</ordinal>
+              <family>Apple+</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>21698</approx-count>
+              <contains-null>true</contains-null>
+              <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Apple_8D31A84DA18845F792F2AF3992F617CF]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Percent change in volume</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[Percent change in volume]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Percent change in volume</remote-alias>
+              <ordinal>15</ordinal>
+              <family>Apple+</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>25222</approx-count>
+              <contains-null>true</contains-null>
+              <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Apple_8D31A84DA18845F792F2AF3992F617CF]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Table Name</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[Table Name]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Table Name</remote-alias>
+              <ordinal>16</ordinal>
+              <family>Apple+</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>6</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RIN' />
+              <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Apple_8D31A84DA18845F792F2AF3992F617CF]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            </metadata-record>
+          </metadata-records>
+        </connection>
+      </extract>
+      <layout _.fcp.SchemaViewerObjectModel.false...dim-percentage='0.5' _.fcp.SchemaViewerObjectModel.false...measure-percentage='0.4' dim-ordering='alphabetic' measure-ordering='alphabetic' rowDisplayCount='10000' show-aliased-fields='true' show-structure='true' />
+      <style>
+        <style-rule element='mark'>
+          <encoding attr='color' field='[none:Table Name:nk]' type='palette'>
+            <map to='#76b7b2'>
+              <bucket>&quot;Apple&quot;</bucket>
+            </map>
+            <map to='#9c755f'>
+              <bucket>&quot;Facebook&quot;</bucket>
+            </map>
+            <map to='#b07aa1'>
+              <bucket>&quot;Tesla&quot;</bucket>
+            </map>
+            <map to='#bab0ac'>
+              <bucket>&quot;Google&quot;</bucket>
+            </map>
+            <map to='#e15759'>
+              <bucket>&quot;Twitter&quot;</bucket>
+            </map>
+            <map to='#edc948'>
+              <bucket>&quot;Nvidia&quot;</bucket>
+            </map>
+          </encoding>
+          <encoding attr='color' field='[:Measure Names]' type='palette'>
+            <map to='#4e79a7'>
+              <bucket>&quot;[federated.14ttqj919vql5v1a4mjgi1opb86z].[sum:Adj Close:qk]&quot;</bucket>
+            </map>
+            <map to='#59a14f'>
+              <bucket>&quot;[federated.14ttqj919vql5v1a4mjgi1opb86z].[__tableau_internal_object_id__].[cnt:Apple_8D31A84DA18845F792F2AF3992F617CF:qk]&quot;</bucket>
+            </map>
+            <map to='#79706e'>
+              <bucket>&quot;[federated.14ttqj919vql5v1a4mjgi1opb86z].[sum:Percent change in volume:qk]&quot;</bucket>
+            </map>
+            <map to='#8cd17d'>
+              <bucket>&quot;[federated.14ttqj919vql5v1a4mjgi1opb86z].[sum:F1:qk]&quot;</bucket>
+            </map>
+            <map to='#9d9b3d'>
+              <bucket>&quot;[federated.14ttqj919vql5v1a4mjgi1opb86z].[sum:Open:qk]&quot;</bucket>
+            </map>
+            <map to='#a0cbe8'>
+              <bucket>&quot;[federated.14ttqj919vql5v1a4mjgi1opb86z].[sum:Change in price:qk]&quot;</bucket>
+            </map>
+            <map to='#aa8780'>
+              <bucket>&quot;[federated.14ttqj919vql5v1a4mjgi1opb86z].[sum:MA50:qk]&quot;</bucket>
+            </map>
+            <map to='#b6992d'>
+              <bucket>&quot;[federated.14ttqj919vql5v1a4mjgi1opb86z].[max:High:qk]&quot;</bucket>
+            </map>
+            <map to='#b6992d'>
+              <bucket>&quot;[federated.14ttqj919vql5v1a4mjgi1opb86z].[sum:High:qk]&quot;</bucket>
+            </map>
+            <map to='#bab0ac'>
+              <bucket>&quot;[federated.14ttqj919vql5v1a4mjgi1opb86z].[sum:Previous day close price:qk]&quot;</bucket>
+            </map>
+            <map to='#d37295'>
+              <bucket>&quot;[federated.14ttqj919vql5v1a4mjgi1opb86z].[sum:Previous day volume:qk]&quot;</bucket>
+            </map>
+            <map to='#f1ce63'>
+              <bucket>&quot;[federated.14ttqj919vql5v1a4mjgi1opb86z].[min:Low:qk]&quot;</bucket>
+            </map>
+            <map to='#f1ce63'>
+              <bucket>&quot;[federated.14ttqj919vql5v1a4mjgi1opb86z].[sum:Low:qk]&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;[federated.14ttqj919vql5v1a4mjgi1opb86z].[sum:Change in volume:qk]&quot;</bucket>
+            </map>
+            <map to='#fabfd2'>
+              <bucket>&quot;[federated.14ttqj919vql5v1a4mjgi1opb86z].[sum:Volume:qk]&quot;</bucket>
+            </map>
+            <map to='#ff9888'>
+              <bucket>&quot;[federated.14ttqj919vql5v1a4mjgi1opb86z].[sum:MA200:qk]&quot;</bucket>
+            </map>
+            <map to='#ff9d9a'>
+              <bucket>&quot;[federated.14ttqj919vql5v1a4mjgi1opb86z].[sum:Percent change in price:qk]&quot;</bucket>
+            </map>
+            <map to='#ffbe7d'>
+              <bucket>&quot;[federated.14ttqj919vql5v1a4mjgi1opb86z].[sum:Close:qk]&quot;</bucket>
+            </map>
+          </encoding>
+        </style-rule>
+      </style>
+      <semantic-values>
+        <semantic-value key='[Country].[Name]' value='&quot;India&quot;' />
+      </semantic-values>
+      <datasource-dependencies datasource='Parameters'>
+        <column caption='start date' datatype='date' default-format='*m/d/yyyy' name='[Parameter 1]' param-domain-type='range' role='measure' type='quantitative' value='#2016-01-04#'>
+          <calculation class='tableau' formula='#2016-01-04#' />
+          <range max='#2020-04-01#' min='#2016-01-04#' />
+        </column>
+        <column caption='end date' datatype='date' default-format='*m/d/yyyy' name='[Parameter 2]' param-domain-type='range' role='measure' type='quantitative' value='#2020-04-01#'>
+          <calculation class='tableau' formula='#2020-04-01#' />
+          <range max='#2020-04-01#' min='#2016-01-04#' />
+        </column>
+      </datasource-dependencies>
+      <filter class='categorical' column='[yr:Date:ok]' filter-group='2'>
+        <groupfilter function='union' user:ui-domain='database' user:ui-enumeration='inclusive' user:ui-marker='enumerate'>
+          <groupfilter function='member' level='[yr:Date:ok]' member='2016' />
+          <groupfilter function='member' level='[yr:Date:ok]' member='2017' />
+          <groupfilter function='member' level='[yr:Date:ok]' member='2018' />
+          <groupfilter function='member' level='[yr:Date:ok]' member='2019' />
+          <groupfilter function='member' level='[yr:Date:ok]' member='2020' />
+        </groupfilter>
+      </filter>
+      <_.fcp.ObjectModelEncapsulateLegacy.true...object-graph>
+        <objects>
+          <object caption='Apple' id='Apple_8D31A84DA18845F792F2AF3992F617CF'>
+            <properties context=''>
+              <relation all='true' name='Apple+' type='union'>
+                <columns header='yes'>
+                  <column datatype='integer' name='F1' />
+                  <column datatype='date' name='Date' />
+                  <column datatype='real' name='Open' />
+                  <column datatype='real' name='High' />
+                  <column datatype='real' name='Low' />
+                  <column datatype='real' name='Close' />
+                  <column datatype='real' name='Adj Close' />
+                  <column datatype='integer' name='Volume' />
+                  <column datatype='real' name='MA50' />
+                  <column datatype='real' name='MA200' />
+                  <column datatype='real' name='Previous day close price' />
+                  <column datatype='real' name='Change in price' />
+                  <column datatype='real' name='Percent change in price' />
+                  <column datatype='integer' name='Previous day volume' />
+                  <column datatype='integer' name='Change in volume' />
+                  <column datatype='real' name='Percent change in volume' />
+                  <column datatype='string' name='Sheet' />
+                  <column datatype='string' name='Table Name' />
+                </columns>
+                <relation connection='excel-direct.15yubqj1accz6f131itk70977y0x' name='Apple' table='[Apple$]' type='table'>
+                  <columns gridOrigin='A1:P9910:no:A1:P9910:0' header='yes' outcome='6'>
+                    <column datatype='integer' name='F1' ordinal='0' />
+                    <column datatype='date' name='Date' ordinal='1' />
+                    <column datatype='real' name='Open' ordinal='2' />
+                    <column datatype='real' name='High' ordinal='3' />
+                    <column datatype='real' name='Low' ordinal='4' />
+                    <column datatype='real' name='Close' ordinal='5' />
+                    <column datatype='real' name='Adj Close' ordinal='6' />
+                    <column datatype='integer' name='Volume' ordinal='7' />
+                    <column datatype='real' name='MA50' ordinal='8' />
+                    <column datatype='real' name='MA200' ordinal='9' />
+                    <column datatype='real' name='Previous day close price' ordinal='10' />
+                    <column datatype='real' name='Change in price' ordinal='11' />
+                    <column datatype='real' name='Percent change in price' ordinal='12' />
+                    <column datatype='integer' name='Previous day volume' ordinal='13' />
+                    <column datatype='integer' name='Change in volume' ordinal='14' />
+                    <column datatype='real' name='Percent change in volume' ordinal='15' />
+                  </columns>
+                </relation>
+                <relation connection='excel-direct.15yubqj1accz6f131itk70977y0x' name='Facebook' table='[Facebook$]' type='table'>
+                  <columns gridOrigin='A1:P1981:no:A1:P1981:0' header='yes' outcome='6'>
+                    <column datatype='integer' name='F1' ordinal='0' />
+                    <column datatype='date' name='Date' ordinal='1' />
+                    <column datatype='real' name='Open' ordinal='2' />
+                    <column datatype='real' name='High' ordinal='3' />
+                    <column datatype='real' name='Low' ordinal='4' />
+                    <column datatype='real' name='Close' ordinal='5' />
+                    <column datatype='real' name='Adj Close' ordinal='6' />
+                    <column datatype='integer' name='Volume' ordinal='7' />
+                    <column datatype='real' name='MA50' ordinal='8' />
+                    <column datatype='real' name='MA200' ordinal='9' />
+                    <column datatype='real' name='Previous day close price' ordinal='10' />
+                    <column datatype='real' name='Change in price' ordinal='11' />
+                    <column datatype='real' name='Percent change in price' ordinal='12' />
+                    <column datatype='integer' name='Previous day volume' ordinal='13' />
+                    <column datatype='integer' name='Change in volume' ordinal='14' />
+                    <column datatype='real' name='Percent change in volume' ordinal='15' />
+                  </columns>
+                </relation>
+                <relation connection='excel-direct.15yubqj1accz6f131itk70977y0x' name='Google' table='[Google$]' type='table'>
+                  <columns gridOrigin='A1:P3933:no:A1:P3933:0' header='yes' outcome='2'>
+                    <column datatype='integer' name='F1' ordinal='0' />
+                    <column datatype='date' name='Date' ordinal='1' />
+                    <column datatype='real' name='Open' ordinal='2' />
+                    <column datatype='real' name='High' ordinal='3' />
+                    <column datatype='real' name='Low' ordinal='4' />
+                    <column datatype='real' name='Close' ordinal='5' />
+                    <column datatype='real' name='Adj Close' ordinal='6' />
+                    <column datatype='integer' name='Volume' ordinal='7' />
+                    <column datatype='real' name='MA50' ordinal='8' />
+                    <column datatype='real' name='MA200' ordinal='9' />
+                    <column datatype='real' name='Previous day close price' ordinal='10' />
+                    <column datatype='real' name='Change in price' ordinal='11' />
+                    <column datatype='real' name='Percent change in price' ordinal='12' />
+                    <column datatype='integer' name='Previous day volume' ordinal='13' />
+                    <column datatype='integer' name='Change in volume' ordinal='14' />
+                    <column datatype='real' name='Percent change in volume' ordinal='15' />
+                  </columns>
+                </relation>
+                <relation connection='excel-direct.15yubqj1accz6f131itk70977y0x' name='Nvidia' table='[Nvidia$]' type='table'>
+                  <columns gridOrigin='A1:P5335:no:A1:P5335:0' header='yes' outcome='6'>
+                    <column datatype='integer' name='F1' ordinal='0' />
+                    <column datatype='date' name='Date' ordinal='1' />
+                    <column datatype='real' name='Open' ordinal='2' />
+                    <column datatype='real' name='High' ordinal='3' />
+                    <column datatype='real' name='Low' ordinal='4' />
+                    <column datatype='real' name='Close' ordinal='5' />
+                    <column datatype='real' name='Adj Close' ordinal='6' />
+                    <column datatype='integer' name='Volume' ordinal='7' />
+                    <column datatype='real' name='MA50' ordinal='8' />
+                    <column datatype='real' name='MA200' ordinal='9' />
+                    <column datatype='real' name='Previous day close price' ordinal='10' />
+                    <column datatype='real' name='Change in price' ordinal='11' />
+                    <column datatype='real' name='Percent change in price' ordinal='12' />
+                    <column datatype='integer' name='Previous day volume' ordinal='13' />
+                    <column datatype='integer' name='Change in volume' ordinal='14' />
+                    <column datatype='real' name='Percent change in volume' ordinal='15' />
+                  </columns>
+                </relation>
+                <relation connection='excel-direct.15yubqj1accz6f131itk70977y0x' name='Tesla' table='[Tesla$]' type='table'>
+                  <columns gridOrigin='A1:P2458:no:A1:P2458:0' header='yes' outcome='6'>
+                    <column datatype='integer' name='F1' ordinal='0' />
+                    <column datatype='date' name='Date' ordinal='1' />
+                    <column datatype='real' name='Open' ordinal='2' />
+                    <column datatype='real' name='High' ordinal='3' />
+                    <column datatype='real' name='Low' ordinal='4' />
+                    <column datatype='real' name='Close' ordinal='5' />
+                    <column datatype='real' name='Adj Close' ordinal='6' />
+                    <column datatype='integer' name='Volume' ordinal='7' />
+                    <column datatype='real' name='MA50' ordinal='8' />
+                    <column datatype='real' name='MA200' ordinal='9' />
+                    <column datatype='real' name='Previous day close price' ordinal='10' />
+                    <column datatype='real' name='Change in price' ordinal='11' />
+                    <column datatype='real' name='Percent change in price' ordinal='12' />
+                    <column datatype='integer' name='Previous day volume' ordinal='13' />
+                    <column datatype='integer' name='Change in volume' ordinal='14' />
+                    <column datatype='real' name='Percent change in volume' ordinal='15' />
+                  </columns>
+                </relation>
+                <relation connection='excel-direct.15yubqj1accz6f131itk70977y0x' name='Twitter' table='[Twitter$]' type='table'>
+                  <columns gridOrigin='A1:P1611:no:A1:P1611:0' header='yes' outcome='6'>
+                    <column datatype='integer' name='F1' ordinal='0' />
+                    <column datatype='date' name='Date' ordinal='1' />
+                    <column datatype='real' name='Open' ordinal='2' />
+                    <column datatype='real' name='High' ordinal='3' />
+                    <column datatype='real' name='Low' ordinal='4' />
+                    <column datatype='real' name='Close' ordinal='5' />
+                    <column datatype='real' name='Adj Close' ordinal='6' />
+                    <column datatype='integer' name='Volume' ordinal='7' />
+                    <column datatype='real' name='MA50' ordinal='8' />
+                    <column datatype='real' name='MA200' ordinal='9' />
+                    <column datatype='real' name='Previous day close price' ordinal='10' />
+                    <column datatype='real' name='Change in price' ordinal='11' />
+                    <column datatype='real' name='Percent change in price' ordinal='12' />
+                    <column datatype='integer' name='Previous day volume' ordinal='13' />
+                    <column datatype='integer' name='Change in volume' ordinal='14' />
+                    <column datatype='real' name='Percent change in volume' ordinal='15' />
+                  </columns>
+                </relation>
+              </relation>
+            </properties>
+            <properties context='extract'>
+              <relation name='Extract' table='[Extract].[Extract]' type='table' />
+            </properties>
+          </object>
+        </objects>
+      </_.fcp.ObjectModelEncapsulateLegacy.true...object-graph>
+    </datasource>
+  </datasources>
+  <actions>
+    <action caption='Highlight 1 (generated)' name='[Action1_1D5076CC39A54FDD95D6017C065D61C8]'>
+      <activation auto-clear='true' type='on-select' />
+      <source dashboard='Dashboard 1' type='sheet' />
+      <command command='tsc:brush'>
+        <param name='field-captions' value='Company' />
+        <param name='target' value='Dashboard 1' />
+      </command>
+    </action>
+  </actions>
+  <worksheets>
+    <worksheet name='Detailed Price table'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run fontalignment='1'>&lt;Sheet Name&gt;</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <repository-location derived-from='https://public.tableau.com/workbooks/Stock_Market_Dashboard_BIVA_Project/DetailedPricetable?rev=' id='DetailedPricetable' path='/workbooks/Stock_Market_Dashboard_BIVA_Project' revision='' />
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='Apple+ (CompanyDB)' name='federated.14ttqj919vql5v1a4mjgi1opb86z' />
+            <datasource name='Parameters' />
+          </datasources>
+          <datasource-dependencies datasource='Parameters'>
+            <column caption='start date' datatype='date' default-format='*m/d/yyyy' name='[Parameter 1]' param-domain-type='range' role='measure' type='quantitative' value='#2016-01-04#'>
+              <calculation class='tableau' formula='#2016-01-04#' />
+              <range max='#2020-04-01#' min='#2016-01-04#' />
+            </column>
+            <column caption='end date' datatype='date' default-format='*m/d/yyyy' name='[Parameter 2]' param-domain-type='range' role='measure' type='quantitative' value='#2020-04-01#'>
+              <calculation class='tableau' formula='#2020-04-01#' />
+              <range max='#2020-04-01#' min='#2016-01-04#' />
+            </column>
+          </datasource-dependencies>
+          <datasource-dependencies datasource='federated.14ttqj919vql5v1a4mjgi1opb86z'>
+            <column aggregation='Sum' caption='Study Period' datatype='integer' name='[Calculation_1311954933860835328]' role='dimension' type='ordinal'>
+              <calculation class='tableau' formula='IF [Date]&gt;=[Parameters].[Parameter 1] and [Date]&lt;=[Parameters].[Parameter 2] THEN 1&#13;&#10;ELSE 0&#13;&#10;END' />
+            </column>
+            <column aggregation='Sum' caption='Last day only' datatype='integer' name='[Calculation_1311954933867307009]' role='dimension' type='ordinal'>
+              <calculation class='tableau' formula='IF [Date] = {FIXED : MAX([Parameters].[Parameter 2])} THEN 1&#13;&#10;ELSE 0&#13;&#10;END' />
+            </column>
+            <column caption='Upper price' datatype='string' name='[Calculation_1311954933870096386]' role='dimension' type='nominal'>
+              <calculation class='tableau' formula='IF [Percent change in price] &gt; 0 THEN &apos;▲&apos; END' />
+            </column>
+            <column caption='Down price' datatype='string' name='[Calculation_1311954933870833667]' role='dimension' type='nominal'>
+              <calculation class='tableau' formula='IF [Percent change in price] &lt; 0 THEN &apos;▼&apos; END' />
+            </column>
+            <column datatype='real' name='[Change in price]' role='measure' type='quantitative' />
+            <column datatype='real' name='[Close]' role='measure' type='quantitative' />
+            <column datatype='date' name='[Date]' role='dimension' type='ordinal' />
+            <column datatype='real' name='[Percent change in price]' role='measure' type='quantitative' />
+            <column datatype='real' name='[Previous day close price]' role='measure' type='quantitative' />
+            <column caption='Company' datatype='string' name='[Table Name]' role='dimension' type='nominal' />
+            <column-instance column='[Calculation_1311954933860835328]' derivation='None' name='[none:Calculation_1311954933860835328:ok]' pivot='key' type='ordinal' />
+            <column-instance column='[Calculation_1311954933867307009]' derivation='None' name='[none:Calculation_1311954933867307009:ok]' pivot='key' type='ordinal' />
+            <column-instance column='[Calculation_1311954933870096386]' derivation='None' name='[none:Calculation_1311954933870096386:nk]' pivot='key' type='nominal' />
+            <column-instance column='[Calculation_1311954933870833667]' derivation='None' name='[none:Calculation_1311954933870833667:nk]' pivot='key' type='nominal' />
+            <column-instance column='[Table Name]' derivation='None' name='[none:Table Name:nk]' pivot='key' type='nominal' />
+            <column-instance column='[Change in price]' derivation='Sum' name='[sum:Change in price:ok]' pivot='key' type='ordinal' />
+            <column-instance column='[Close]' derivation='Sum' name='[sum:Close:ok]' pivot='key' type='ordinal' />
+            <column-instance column='[Percent change in price]' derivation='Sum' name='[sum:Percent change in price:ok]' pivot='key' type='ordinal' />
+            <column-instance column='[Previous day close price]' derivation='Sum' name='[sum:Previous day close price:ok]' pivot='key' type='ordinal' />
+          </datasource-dependencies>
+          <filter class='categorical' column='[federated.14ttqj919vql5v1a4mjgi1opb86z].[none:Calculation_1311954933860835328:ok]'>
+            <groupfilter function='member' level='[none:Calculation_1311954933860835328:ok]' member='1' user:ui-domain='database' user:ui-enumeration='inclusive' user:ui-marker='enumerate' />
+          </filter>
+          <filter class='categorical' column='[federated.14ttqj919vql5v1a4mjgi1opb86z].[none:Calculation_1311954933867307009:ok]'>
+            <groupfilter function='member' level='[none:Calculation_1311954933867307009:ok]' member='1' user:ui-domain='database' user:ui-enumeration='inclusive' user:ui-marker='enumerate' />
+          </filter>
+          <slices>
+            <column>[federated.14ttqj919vql5v1a4mjgi1opb86z].[none:Calculation_1311954933867307009:ok]</column>
+            <column>[federated.14ttqj919vql5v1a4mjgi1opb86z].[none:Calculation_1311954933860835328:ok]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='cell'>
+            <format attr='width' value='99' />
+            <format attr='height' field='[federated.14ttqj919vql5v1a4mjgi1opb86z].[sum:Change in price:ok]' value='58' />
+            <format attr='width' field='[federated.14ttqj919vql5v1a4mjgi1opb86z].[:Measure Names]' value='120' />
+            <format attr='text-format' field='[federated.14ttqj919vql5v1a4mjgi1opb86z].[sum:Percent change in price:ok]' value='p0.00%' />
+            <format attr='vertical-align' value='auto' />
+            <format attr='text-align' value='center' />
+            <format attr='border-color' value='#000000' />
+            <format attr='border-style' value='solid' />
+          </style-rule>
+          <style-rule element='header'>
+            <format attr='width' field='[federated.14ttqj919vql5v1a4mjgi1opb86z].[sum:Previous day close price:ok]' value='128' />
+            <format attr='width' field='[federated.14ttqj919vql5v1a4mjgi1opb86z].[sum:Change in price:ok]' value='100' />
+            <format attr='border-style' value='solid' />
+            <format attr='border-color' value='#000000' />
+            <format attr='width' field='[federated.14ttqj919vql5v1a4mjgi1opb86z].[sum:Close:ok]' value='80' />
+            <format attr='width' field='[federated.14ttqj919vql5v1a4mjgi1opb86z].[none:Table Name:nk]' value='72' />
+            <format attr='height' field='[federated.14ttqj919vql5v1a4mjgi1opb86z].[:Measure Names]' value='36' />
+          </style-rule>
+          <style-rule element='label'>
+            <format attr='text-format' field='[federated.14ttqj919vql5v1a4mjgi1opb86z].[sum:Previous day close price:ok]' value='c&quot;$&quot;#,##0.00;&quot;$&quot;-#,##0.00' />
+            <format attr='text-format' field='[federated.14ttqj919vql5v1a4mjgi1opb86z].[sum:Close:ok]' value='c&quot;$&quot;#,##0.00' />
+            <format attr='text-format' field='[federated.14ttqj919vql5v1a4mjgi1opb86z].[sum:Change in price:ok]' value='c&quot;$&quot;#,##0.00' />
+            <format attr='text-align' value='center' />
+          </style-rule>
+          <style-rule element='pane'>
+            <format attr='border-style' value='solid' />
+            <format attr='border-color' value='#000000' />
+          </style-rule>
+          <style-rule element='table-div'>
+            <format attr='stroke-color' scope='rows' value='#000000' />
+            <format attr='stroke-color' scope='cols' value='#000000' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <text column='[federated.14ttqj919vql5v1a4mjgi1opb86z].[sum:Percent change in price:ok]' />
+              <text column='[federated.14ttqj919vql5v1a4mjgi1opb86z].[none:Calculation_1311954933870096386:nk]' />
+              <text column='[federated.14ttqj919vql5v1a4mjgi1opb86z].[none:Calculation_1311954933870833667:nk]' />
+            </encodings>
+            <customized-label>
+              <formatted-text>
+                <run fontcolor='#59a14f'><![CDATA[<[federated.14ttqj919vql5v1a4mjgi1opb86z].[none:Calculation_1311954933870096386:nk]>]]></run>
+                <run fontcolor='#ff0004'><![CDATA[<[federated.14ttqj919vql5v1a4mjgi1opb86z].[none:Calculation_1311954933870833667:nk]>]]></run>
+                <run><![CDATA[<[federated.14ttqj919vql5v1a4mjgi1opb86z].[sum:Percent change in price:ok]>]]></run>
+              </formatted-text>
+            </customized-label>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-show' value='true' />
+                <format attr='mark-labels-cull' value='true' />
+              </style-rule>
+              <style-rule element='pane'>
+                <format attr='minwidth' value='-1' />
+                <format attr='maxwidth' value='-1' />
+                <format attr='minheight' value='-1' />
+                <format attr='maxheight' value='-1' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>([federated.14ttqj919vql5v1a4mjgi1opb86z].[none:Table Name:nk] / ([federated.14ttqj919vql5v1a4mjgi1opb86z].[sum:Close:ok] / ([federated.14ttqj919vql5v1a4mjgi1opb86z].[sum:Previous day close price:ok] / [federated.14ttqj919vql5v1a4mjgi1opb86z].[sum:Change in price:ok])))</rows>
+        <cols>[federated.14ttqj919vql5v1a4mjgi1opb86z].[:Measure Names]</cols>
+      </table>
+      <simple-id uuid='{B271E5C4-5272-4E84-8138-5E80B64CD290}' />
+    </worksheet>
+    <worksheet name='Detailed Volume Table '>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run fontalignment='1'>&lt;Sheet Name&gt;</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <repository-location derived-from='https://public.tableau.com/workbooks/Stock_Market_Dashboard_BIVA_Project/DetailedVolumeTable?rev=' id='DetailedVolumeTable' path='/workbooks/Stock_Market_Dashboard_BIVA_Project' revision='' />
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='Apple+ (CompanyDB)' name='federated.14ttqj919vql5v1a4mjgi1opb86z' />
+            <datasource name='Parameters' />
+          </datasources>
+          <datasource-dependencies datasource='Parameters'>
+            <column caption='start date' datatype='date' default-format='*m/d/yyyy' name='[Parameter 1]' param-domain-type='range' role='measure' type='quantitative' value='#2016-01-04#'>
+              <calculation class='tableau' formula='#2016-01-04#' />
+              <range max='#2020-04-01#' min='#2016-01-04#' />
+            </column>
+            <column caption='end date' datatype='date' default-format='*m/d/yyyy' name='[Parameter 2]' param-domain-type='range' role='measure' type='quantitative' value='#2020-04-01#'>
+              <calculation class='tableau' formula='#2020-04-01#' />
+              <range max='#2020-04-01#' min='#2016-01-04#' />
+            </column>
+          </datasource-dependencies>
+          <datasource-dependencies datasource='federated.14ttqj919vql5v1a4mjgi1opb86z'>
+            <column aggregation='Sum' caption='Study Period' datatype='integer' name='[Calculation_1311954933860835328]' role='dimension' type='ordinal'>
+              <calculation class='tableau' formula='IF [Date]&gt;=[Parameters].[Parameter 1] and [Date]&lt;=[Parameters].[Parameter 2] THEN 1&#13;&#10;ELSE 0&#13;&#10;END' />
+            </column>
+            <column aggregation='Sum' caption='Last day only' datatype='integer' name='[Calculation_1311954933867307009]' role='dimension' type='ordinal'>
+              <calculation class='tableau' formula='IF [Date] = {FIXED : MAX([Parameters].[Parameter 2])} THEN 1&#13;&#10;ELSE 0&#13;&#10;END' />
+            </column>
+            <column datatype='integer' name='[Change in volume]' role='measure' type='quantitative' />
+            <column datatype='date' name='[Date]' role='dimension' type='ordinal' />
+            <column caption='Down volume' datatype='string' name='[Down price (copy)_1311954933885440004]' role='dimension' type='nominal'>
+              <calculation class='tableau' formula='IF [Percent change in volume] &lt; 0 THEN &apos;▼&apos; END' />
+            </column>
+            <column datatype='real' name='[Percent change in volume]' role='measure' type='quantitative' />
+            <column datatype='integer' name='[Previous day volume]' role='measure' type='quantitative' />
+            <column caption='Company' datatype='string' name='[Table Name]' role='dimension' type='nominal' />
+            <column caption='Upper volume' datatype='string' name='[Upper price (copy)_1311954933885562885]' role='dimension' type='nominal'>
+              <calculation class='tableau' formula='IF [Percent change in volume] &gt; 0 THEN &apos;▲&apos; END' />
+            </column>
+            <column datatype='integer' name='[Volume]' role='measure' type='quantitative' />
+            <column-instance column='[Calculation_1311954933860835328]' derivation='None' name='[none:Calculation_1311954933860835328:ok]' pivot='key' type='ordinal' />
+            <column-instance column='[Calculation_1311954933867307009]' derivation='None' name='[none:Calculation_1311954933867307009:ok]' pivot='key' type='ordinal' />
+            <column-instance column='[Down price (copy)_1311954933885440004]' derivation='None' name='[none:Down price (copy)_1311954933885440004:nk]' pivot='key' type='nominal' />
+            <column-instance column='[Table Name]' derivation='None' name='[none:Table Name:nk]' pivot='key' type='nominal' />
+            <column-instance column='[Upper price (copy)_1311954933885562885]' derivation='None' name='[none:Upper price (copy)_1311954933885562885:nk]' pivot='key' type='nominal' />
+            <column-instance column='[Change in volume]' derivation='Sum' name='[sum:Change in volume:ok]' pivot='key' type='ordinal' />
+            <column-instance column='[Percent change in volume]' derivation='Sum' name='[sum:Percent change in volume:ok]' pivot='key' type='ordinal' />
+            <column-instance column='[Previous day volume]' derivation='Sum' name='[sum:Previous day volume:ok]' pivot='key' type='ordinal' />
+            <column-instance column='[Volume]' derivation='Sum' name='[sum:Volume:ok]' pivot='key' type='ordinal' />
+          </datasource-dependencies>
+          <filter class='categorical' column='[federated.14ttqj919vql5v1a4mjgi1opb86z].[none:Calculation_1311954933860835328:ok]'>
+            <groupfilter function='member' level='[none:Calculation_1311954933860835328:ok]' member='1' user:ui-domain='database' user:ui-enumeration='inclusive' user:ui-marker='enumerate' />
+          </filter>
+          <filter class='categorical' column='[federated.14ttqj919vql5v1a4mjgi1opb86z].[none:Calculation_1311954933867307009:ok]'>
+            <groupfilter function='member' level='[none:Calculation_1311954933867307009:ok]' member='1' user:ui-domain='database' user:ui-enumeration='inclusive' user:ui-marker='enumerate' />
+          </filter>
+          <slices>
+            <column>[federated.14ttqj919vql5v1a4mjgi1opb86z].[none:Calculation_1311954933867307009:ok]</column>
+            <column>[federated.14ttqj919vql5v1a4mjgi1opb86z].[none:Calculation_1311954933860835328:ok]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='cell'>
+            <format attr='width' value='113' />
+            <format attr='text-format' field='[federated.14ttqj919vql5v1a4mjgi1opb86z].[sum:Percent change in volume:ok]' value='p0.00%' />
+            <format attr='text-align' value='center' />
+            <format attr='border-color' value='#000000' />
+            <format attr='border-style' value='solid' />
+            <format attr='height' field='[federated.14ttqj919vql5v1a4mjgi1opb86z].[sum:Change in volume:ok]' value='60' />
+            <format attr='width' field='[federated.14ttqj919vql5v1a4mjgi1opb86z].[:Measure Names]' value='120' />
+          </style-rule>
+          <style-rule element='header'>
+            <format attr='border-color' value='#000000' />
+            <format attr='border-style' value='solid' />
+            <format attr='width' field='[federated.14ttqj919vql5v1a4mjgi1opb86z].[sum:Volume:ok]' value='120' />
+            <format attr='width' field='[federated.14ttqj919vql5v1a4mjgi1opb86z].[sum:Previous day volume:ok]' value='112' />
+            <format attr='width' field='[federated.14ttqj919vql5v1a4mjgi1opb86z].[sum:Change in volume:ok]' value='100' />
+            <format attr='width' field='[federated.14ttqj919vql5v1a4mjgi1opb86z].[none:Table Name:nk]' value='96' />
+            <format attr='height' field='[federated.14ttqj919vql5v1a4mjgi1opb86z].[:Measure Names]' value='36' />
+          </style-rule>
+          <style-rule element='label'>
+            <format attr='text-align' value='center' />
+            <format attr='display' field='[federated.14ttqj919vql5v1a4mjgi1opb86z].[none:Table Name:nk]' value='false' />
+          </style-rule>
+          <style-rule element='pane'>
+            <format attr='border-color' value='#000000' />
+            <format attr='border-style' value='solid' />
+          </style-rule>
+          <style-rule element='table-div'>
+            <format attr='stroke-color' scope='rows' value='#000000' />
+            <format attr='stroke-color' scope='cols' value='#000000' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <text column='[federated.14ttqj919vql5v1a4mjgi1opb86z].[sum:Percent change in volume:ok]' />
+              <text column='[federated.14ttqj919vql5v1a4mjgi1opb86z].[none:Upper price (copy)_1311954933885562885:nk]' />
+              <text column='[federated.14ttqj919vql5v1a4mjgi1opb86z].[none:Down price (copy)_1311954933885440004:nk]' />
+            </encodings>
+            <customized-label>
+              <formatted-text>
+                <run fontcolor='#59a14f'><![CDATA[<[federated.14ttqj919vql5v1a4mjgi1opb86z].[none:Upper price (copy)_1311954933885562885:nk]>]]></run>
+                <run fontcolor='#ff0004'><![CDATA[<[federated.14ttqj919vql5v1a4mjgi1opb86z].[none:Down price (copy)_1311954933885440004:nk]>]]></run>
+                <run><![CDATA[<[federated.14ttqj919vql5v1a4mjgi1opb86z].[sum:Percent change in volume:ok]>]]></run>
+              </formatted-text>
+            </customized-label>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-show' value='true' />
+                <format attr='mark-labels-cull' value='true' />
+              </style-rule>
+              <style-rule element='pane'>
+                <format attr='minwidth' value='-1' />
+                <format attr='maxwidth' value='-1' />
+                <format attr='minheight' value='-1' />
+                <format attr='maxheight' value='-1' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>([federated.14ttqj919vql5v1a4mjgi1opb86z].[none:Table Name:nk] / ([federated.14ttqj919vql5v1a4mjgi1opb86z].[sum:Volume:ok] / ([federated.14ttqj919vql5v1a4mjgi1opb86z].[sum:Previous day volume:ok] / [federated.14ttqj919vql5v1a4mjgi1opb86z].[sum:Change in volume:ok])))</rows>
+        <cols>[federated.14ttqj919vql5v1a4mjgi1opb86z].[:Measure Names]</cols>
+      </table>
+      <simple-id uuid='{CF45C9DE-869C-47D4-AAB5-3527BD2D0014}' />
+    </worksheet>
+    <worksheet name='Highest price in the period'>
+      <repository-location derived-from='https://public.tableau.com/workbooks/Stock_Market_Dashboard_BIVA_Project/Highestpriceintheperiod?rev=' id='Highestpriceintheperiod' path='/workbooks/Stock_Market_Dashboard_BIVA_Project' revision='' />
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='Apple+ (CompanyDB)' name='federated.14ttqj919vql5v1a4mjgi1opb86z' />
+            <datasource name='Parameters' />
+          </datasources>
+          <datasource-dependencies datasource='Parameters'>
+            <column caption='start date' datatype='date' default-format='*m/d/yyyy' name='[Parameter 1]' param-domain-type='range' role='measure' type='quantitative' value='#2016-01-04#'>
+              <calculation class='tableau' formula='#2016-01-04#' />
+              <range max='#2020-04-01#' min='#2016-01-04#' />
+            </column>
+            <column caption='end date' datatype='date' default-format='*m/d/yyyy' name='[Parameter 2]' param-domain-type='range' role='measure' type='quantitative' value='#2020-04-01#'>
+              <calculation class='tableau' formula='#2020-04-01#' />
+              <range max='#2020-04-01#' min='#2016-01-04#' />
+            </column>
+          </datasource-dependencies>
+          <datasource-dependencies datasource='federated.14ttqj919vql5v1a4mjgi1opb86z'>
+            <column aggregation='Sum' caption='Study Period' datatype='integer' name='[Calculation_1311954933860835328]' role='dimension' type='ordinal'>
+              <calculation class='tableau' formula='IF [Date]&gt;=[Parameters].[Parameter 1] and [Date]&lt;=[Parameters].[Parameter 2] THEN 1&#13;&#10;ELSE 0&#13;&#10;END' />
+            </column>
+            <column caption='Highest price in the period text' datatype='string' name='[Calculation_1311954933891833866]' role='dimension' type='nominal'>
+              <calculation class='tableau' formula='&quot;Highest price in the period:&quot;' />
+            </column>
+            <column datatype='date' name='[Date]' role='dimension' type='ordinal' />
+            <column datatype='real' name='[High]' role='measure' type='quantitative' />
+            <column-instance column='[High]' derivation='Max' name='[max:High:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Calculation_1311954933860835328]' derivation='None' name='[none:Calculation_1311954933860835328:ok]' pivot='key' type='ordinal' />
+            <column-instance column='[Calculation_1311954933891833866]' derivation='None' name='[none:Calculation_1311954933891833866:nk]' pivot='key' type='nominal' />
+          </datasource-dependencies>
+          <filter class='categorical' column='[federated.14ttqj919vql5v1a4mjgi1opb86z].[none:Calculation_1311954933860835328:ok]'>
+            <groupfilter function='member' level='[none:Calculation_1311954933860835328:ok]' member='1' user:ui-domain='database' user:ui-enumeration='inclusive' user:ui-marker='enumerate' />
+          </filter>
+          <slices>
+            <column>[federated.14ttqj919vql5v1a4mjgi1opb86z].[none:Calculation_1311954933860835328:ok]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='cell'>
+            <format attr='width' value='174' />
+            <format attr='text-align' value='center' />
+            <format attr='text-format' field='[federated.14ttqj919vql5v1a4mjgi1opb86z].[max:High:qk]' value='c&quot;$&quot;#,##0.00;&quot;$&quot;-#,##0.00' />
+            <format attr='height' value='67' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <text column='[federated.14ttqj919vql5v1a4mjgi1opb86z].[none:Calculation_1311954933891833866:nk]' />
+              <text column='[federated.14ttqj919vql5v1a4mjgi1opb86z].[max:High:qk]' />
+            </encodings>
+            <customized-label>
+              <formatted-text>
+                <run fontsize='10'><![CDATA[<[federated.14ttqj919vql5v1a4mjgi1opb86z].[none:Calculation_1311954933891833866:nk]>]]></run>
+                <run>Æ&#10;</run>
+                <run fontsize='9'><![CDATA[<[federated.14ttqj919vql5v1a4mjgi1opb86z].[max:High:qk]>]]></run>
+              </formatted-text>
+            </customized-label>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-cull' value='true' />
+                <format attr='mark-labels-show' value='true' />
+              </style-rule>
+              <style-rule element='pane'>
+                <format attr='minwidth' value='-1' />
+                <format attr='maxwidth' value='-1' />
+                <format attr='minheight' value='-1' />
+                <format attr='maxheight' value='-1' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows />
+        <cols />
+      </table>
+      <simple-id uuid='{E5FD2D2E-E138-4195-9402-3C95BCF0FF4C}' />
+    </worksheet>
+    <worksheet name='Last day'>
+      <repository-location derived-from='https://public.tableau.com/workbooks/Stock_Market_Dashboard_BIVA_Project/Lastday?rev=' id='Lastday' path='/workbooks/Stock_Market_Dashboard_BIVA_Project' revision='' />
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='Apple+ (CompanyDB)' name='federated.14ttqj919vql5v1a4mjgi1opb86z' />
+            <datasource name='Parameters' />
+          </datasources>
+          <datasource-dependencies datasource='Parameters'>
+            <column caption='end date' datatype='date' default-format='*m/d/yyyy' name='[Parameter 2]' param-domain-type='range' role='measure' type='quantitative' value='#2020-04-01#'>
+              <calculation class='tableau' formula='#2020-04-01#' />
+              <range max='#2020-04-01#' min='#2016-01-04#' />
+            </column>
+          </datasource-dependencies>
+          <datasource-dependencies datasource='federated.14ttqj919vql5v1a4mjgi1opb86z'>
+            <column caption='Last day text' datatype='string' name='[Calculation_1311954933887356934]' role='dimension' type='nominal'>
+              <calculation class='tableau' formula='&quot;Last day:&quot;' />
+            </column>
+            <column caption='Last day' datatype='date' name='[Calculation_1311954933887614983]' role='measure' type='ordinal'>
+              <calculation class='tableau' formula='MAX([Parameters].[Parameter 2])' />
+            </column>
+            <column-instance column='[Calculation_1311954933887356934]' derivation='None' name='[none:Calculation_1311954933887356934:nk]' pivot='key' type='nominal' />
+            <column-instance column='[Calculation_1311954933887614983]' derivation='User' name='[usr:Calculation_1311954933887614983:ok]' pivot='key' type='ordinal' />
+          </datasource-dependencies>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='cell'>
+            <format attr='width' value='189' />
+            <format attr='text-format' field='[federated.14ttqj919vql5v1a4mjgi1opb86z].[usr:Calculation_1311954933887614983:ok]' value='*dddd, d mmmm, yyyy' />
+            <format attr='text-align' value='center' />
+            <format attr='height' value='77' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <text column='[federated.14ttqj919vql5v1a4mjgi1opb86z].[none:Calculation_1311954933887356934:nk]' />
+              <text column='[federated.14ttqj919vql5v1a4mjgi1opb86z].[usr:Calculation_1311954933887614983:ok]' />
+            </encodings>
+            <customized-label>
+              <formatted-text>
+                <run fontsize='10'><![CDATA[<[federated.14ttqj919vql5v1a4mjgi1opb86z].[none:Calculation_1311954933887356934:nk]>]]></run>
+                <run>Æ&#10;</run>
+                <run fontsize='9'><![CDATA[<[federated.14ttqj919vql5v1a4mjgi1opb86z].[usr:Calculation_1311954933887614983:ok]>]]></run>
+              </formatted-text>
+            </customized-label>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-show' value='true' />
+                <format attr='mark-labels-cull' value='true' />
+              </style-rule>
+              <style-rule element='pane'>
+                <format attr='minwidth' value='-1' />
+                <format attr='maxwidth' value='-1' />
+                <format attr='minheight' value='-1' />
+                <format attr='maxheight' value='-1' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows />
+        <cols />
+      </table>
+      <simple-id uuid='{5072E543-89BE-4482-BA30-25A3BA227EBD}' />
+    </worksheet>
+    <worksheet name='Last day total volume'>
+      <repository-location derived-from='https://public.tableau.com/workbooks/Stock_Market_Dashboard_BIVA_Project/Lastdaytotalvolume?rev=' id='Lastdaytotalvolume' path='/workbooks/Stock_Market_Dashboard_BIVA_Project' revision='' />
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='Apple+ (CompanyDB)' name='federated.14ttqj919vql5v1a4mjgi1opb86z' />
+            <datasource name='Parameters' />
+          </datasources>
+          <datasource-dependencies datasource='Parameters'>
+            <column caption='end date' datatype='date' default-format='*m/d/yyyy' name='[Parameter 2]' param-domain-type='range' role='measure' type='quantitative' value='#2020-04-01#'>
+              <calculation class='tableau' formula='#2020-04-01#' />
+              <range max='#2020-04-01#' min='#2016-01-04#' />
+            </column>
+          </datasource-dependencies>
+          <datasource-dependencies datasource='federated.14ttqj919vql5v1a4mjgi1opb86z'>
+            <column aggregation='Sum' caption='Last day only' datatype='integer' name='[Calculation_1311954933867307009]' role='dimension' type='ordinal'>
+              <calculation class='tableau' formula='IF [Date] = {FIXED : MAX([Parameters].[Parameter 2])} THEN 1&#13;&#10;ELSE 0&#13;&#10;END' />
+            </column>
+            <column caption='Last day total vol text' datatype='string' name='[Calculation_1311954933889515528]' role='dimension' type='nominal'>
+              <calculation class='tableau' formula='&quot;Last day total volume:&quot;' />
+            </column>
+            <column datatype='date' name='[Date]' role='dimension' type='ordinal' />
+            <column datatype='integer' name='[Volume]' role='measure' type='quantitative' />
+            <column-instance column='[Calculation_1311954933867307009]' derivation='None' name='[none:Calculation_1311954933867307009:ok]' pivot='key' type='ordinal' />
+            <column-instance column='[Calculation_1311954933889515528]' derivation='None' name='[none:Calculation_1311954933889515528:nk]' pivot='key' type='nominal' />
+            <column-instance column='[Volume]' derivation='Sum' name='[sum:Volume:qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <filter class='categorical' column='[federated.14ttqj919vql5v1a4mjgi1opb86z].[none:Calculation_1311954933867307009:ok]'>
+            <groupfilter function='member' level='[none:Calculation_1311954933867307009:ok]' member='1' user:ui-domain='database' user:ui-enumeration='inclusive' user:ui-marker='enumerate' />
+          </filter>
+          <slices>
+            <column>[federated.14ttqj919vql5v1a4mjgi1opb86z].[none:Calculation_1311954933867307009:ok]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='cell'>
+            <format attr='width' value='195' />
+            <format attr='text-align' value='center' />
+            <format attr='height' value='73' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <text column='[federated.14ttqj919vql5v1a4mjgi1opb86z].[none:Calculation_1311954933889515528:nk]' />
+              <text column='[federated.14ttqj919vql5v1a4mjgi1opb86z].[sum:Volume:qk]' />
+            </encodings>
+            <customized-label>
+              <formatted-text>
+                <run fontsize='10'><![CDATA[<[federated.14ttqj919vql5v1a4mjgi1opb86z].[none:Calculation_1311954933889515528:nk]>]]></run>
+                <run>Æ&#10;</run>
+                <run fontsize='9'><![CDATA[<[federated.14ttqj919vql5v1a4mjgi1opb86z].[sum:Volume:qk]>]]></run>
+              </formatted-text>
+            </customized-label>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-cull' value='true' />
+                <format attr='mark-labels-show' value='true' />
+              </style-rule>
+              <style-rule element='pane'>
+                <format attr='minwidth' value='-1' />
+                <format attr='maxwidth' value='-1' />
+                <format attr='minheight' value='-1' />
+                <format attr='maxheight' value='-1' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows />
+        <cols />
+      </table>
+      <simple-id uuid='{0A511447-C3AC-4099-933E-D76B888E8B78}' />
+    </worksheet>
+    <worksheet name='Lowest price in the period'>
+      <repository-location derived-from='https://public.tableau.com/workbooks/Stock_Market_Dashboard_BIVA_Project/Lowestpriceintheperiod?rev=' id='Lowestpriceintheperiod' path='/workbooks/Stock_Market_Dashboard_BIVA_Project' revision='' />
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='Apple+ (CompanyDB)' name='federated.14ttqj919vql5v1a4mjgi1opb86z' />
+            <datasource name='Parameters' />
+          </datasources>
+          <datasource-dependencies datasource='Parameters'>
+            <column caption='start date' datatype='date' default-format='*m/d/yyyy' name='[Parameter 1]' param-domain-type='range' role='measure' type='quantitative' value='#2016-01-04#'>
+              <calculation class='tableau' formula='#2016-01-04#' />
+              <range max='#2020-04-01#' min='#2016-01-04#' />
+            </column>
+            <column caption='end date' datatype='date' default-format='*m/d/yyyy' name='[Parameter 2]' param-domain-type='range' role='measure' type='quantitative' value='#2020-04-01#'>
+              <calculation class='tableau' formula='#2020-04-01#' />
+              <range max='#2020-04-01#' min='#2016-01-04#' />
+            </column>
+          </datasource-dependencies>
+          <datasource-dependencies datasource='federated.14ttqj919vql5v1a4mjgi1opb86z'>
+            <column aggregation='Sum' caption='Study Period' datatype='integer' name='[Calculation_1311954933860835328]' role='dimension' type='ordinal'>
+              <calculation class='tableau' formula='IF [Date]&gt;=[Parameters].[Parameter 1] and [Date]&lt;=[Parameters].[Parameter 2] THEN 1&#13;&#10;ELSE 0&#13;&#10;END' />
+            </column>
+            <column caption='Lowest price in the period text' datatype='string' name='[Calculation_1311954933890588681]' role='dimension' type='nominal'>
+              <calculation class='tableau' formula='&quot;Lowest price in the period:&quot;' />
+            </column>
+            <column datatype='date' name='[Date]' role='dimension' type='ordinal' />
+            <column datatype='real' name='[Low]' role='measure' type='quantitative' />
+            <column-instance column='[Low]' derivation='Min' name='[min:Low:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Calculation_1311954933860835328]' derivation='None' name='[none:Calculation_1311954933860835328:ok]' pivot='key' type='ordinal' />
+            <column-instance column='[Calculation_1311954933890588681]' derivation='None' name='[none:Calculation_1311954933890588681:nk]' pivot='key' type='nominal' />
+          </datasource-dependencies>
+          <filter class='categorical' column='[federated.14ttqj919vql5v1a4mjgi1opb86z].[none:Calculation_1311954933860835328:ok]'>
+            <groupfilter function='member' level='[none:Calculation_1311954933860835328:ok]' member='1' user:ui-domain='database' user:ui-enumeration='inclusive' user:ui-marker='enumerate' />
+          </filter>
+          <slices>
+            <column>[federated.14ttqj919vql5v1a4mjgi1opb86z].[none:Calculation_1311954933860835328:ok]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='cell'>
+            <format attr='width' value='146' />
+            <format attr='text-align' value='center' />
+            <format attr='text-format' field='[federated.14ttqj919vql5v1a4mjgi1opb86z].[min:Low:qk]' value='c&quot;$&quot;#,##0.00;&quot;$&quot;-#,##0.00' />
+            <format attr='height' value='68' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <text column='[federated.14ttqj919vql5v1a4mjgi1opb86z].[none:Calculation_1311954933890588681:nk]' />
+              <text column='[federated.14ttqj919vql5v1a4mjgi1opb86z].[min:Low:qk]' />
+            </encodings>
+            <customized-label>
+              <formatted-text>
+                <run fontsize='10'><![CDATA[<[federated.14ttqj919vql5v1a4mjgi1opb86z].[none:Calculation_1311954933890588681:nk]>]]></run>
+                <run>Æ&#10;</run>
+                <run fontsize='9'><![CDATA[<[federated.14ttqj919vql5v1a4mjgi1opb86z].[min:Low:qk]>]]></run>
+              </formatted-text>
+            </customized-label>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-show' value='true' />
+                <format attr='mark-labels-cull' value='true' />
+              </style-rule>
+              <style-rule element='pane'>
+                <format attr='minwidth' value='-1' />
+                <format attr='maxwidth' value='-1' />
+                <format attr='minheight' value='-1' />
+                <format attr='maxheight' value='-1' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows />
+        <cols />
+      </table>
+      <simple-id uuid='{98EB8966-8AFD-4E1D-8B04-34ABF5CB77F8}' />
+    </worksheet>
+    <worksheet name='Moving Average - open price'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run fontalignment='1'>&lt;Sheet Name&gt;</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <repository-location derived-from='https://public.tableau.com/workbooks/Stock_Market_Dashboard_BIVA_Project/MovingAverage-openprice?rev=' id='MovingAverage-openprice' path='/workbooks/Stock_Market_Dashboard_BIVA_Project' revision='' />
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='Apple+ (CompanyDB)' name='federated.14ttqj919vql5v1a4mjgi1opb86z' />
+          </datasources>
+          <datasource-dependencies datasource='federated.14ttqj919vql5v1a4mjgi1opb86z'>
+            <column datatype='date' name='[Date]' role='dimension' type='ordinal' />
+            <column caption='Ma200' datatype='real' name='[MA200]' role='measure' type='quantitative' />
+            <column caption='Ma50' datatype='real' name='[MA50]' role='measure' type='quantitative' />
+            <column datatype='real' name='[Open]' role='measure' type='quantitative' />
+            <column caption='Company' datatype='string' name='[Table Name]' role='dimension' type='nominal' />
+            <column-instance column='[Date]' derivation='None' name='[none:Date:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Table Name]' derivation='None' name='[none:Table Name:nk]' pivot='key' type='nominal' />
+            <column-instance column='[MA200]' derivation='Sum' name='[sum:MA200:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[MA50]' derivation='Sum' name='[sum:MA50:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Open]' derivation='Sum' name='[sum:Open:qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <filter class='categorical' column='[federated.14ttqj919vql5v1a4mjgi1opb86z].[:Measure Names]'>
+            <groupfilter function='union' user:op='manual'>
+              <groupfilter function='member' level='[:Measure Names]' member='&quot;[federated.14ttqj919vql5v1a4mjgi1opb86z].[sum:MA200:qk]&quot;' />
+              <groupfilter function='member' level='[:Measure Names]' member='&quot;[federated.14ttqj919vql5v1a4mjgi1opb86z].[sum:MA50:qk]&quot;' />
+              <groupfilter function='member' level='[:Measure Names]' member='&quot;[federated.14ttqj919vql5v1a4mjgi1opb86z].[sum:Open:qk]&quot;' />
+            </groupfilter>
+          </filter>
+          <filter class='categorical' column='[federated.14ttqj919vql5v1a4mjgi1opb86z].[none:Table Name:nk]'>
+            <groupfilter function='member' level='[none:Table Name:nk]' member='&quot;Nvidia&quot;' user:ui-domain='database' user:ui-enumeration='inclusive' user:ui-marker='enumerate' />
+          </filter>
+          <slices>
+            <column>[federated.14ttqj919vql5v1a4mjgi1opb86z].[:Measure Names]</column>
+            <column>[federated.14ttqj919vql5v1a4mjgi1opb86z].[none:Table Name:nk]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='axis'>
+            <format attr='title' class='0' field='[federated.14ttqj919vql5v1a4mjgi1opb86z].[Multiple Values]' scope='rows' value='' />
+            <format attr='title' class='0' field='[federated.14ttqj919vql5v1a4mjgi1opb86z].[none:Date:qk]' scope='cols' value='' />
+          </style-rule>
+          <style-rule element='label'>
+            <format attr='text-format' field='[federated.14ttqj919vql5v1a4mjgi1opb86z].[Multiple Values]' value='c&quot;$&quot;#,##0;&quot;$&quot;-#,##0' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <color column='[federated.14ttqj919vql5v1a4mjgi1opb86z].[:Measure Names]' />
+            </encodings>
+          </pane>
+        </panes>
+        <rows>[federated.14ttqj919vql5v1a4mjgi1opb86z].[Multiple Values]</rows>
+        <cols>[federated.14ttqj919vql5v1a4mjgi1opb86z].[none:Date:qk]</cols>
+      </table>
+      <simple-id uuid='{B3C99C75-DC17-411B-A87C-08431AE0E773}' />
+    </worksheet>
+    <worksheet name='Price percent change'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run fontalignment='1'>&lt;Sheet Name&gt;</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <repository-location derived-from='https://public.tableau.com/workbooks/Stock_Market_Dashboard_BIVA_Project/Pricepercentchange?rev=' id='Pricepercentchange' path='/workbooks/Stock_Market_Dashboard_BIVA_Project' revision='' />
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='Apple+ (CompanyDB)' name='federated.14ttqj919vql5v1a4mjgi1opb86z' />
+            <datasource name='Parameters' />
+          </datasources>
+          <datasource-dependencies datasource='Parameters'>
+            <column caption='start date' datatype='date' default-format='*m/d/yyyy' name='[Parameter 1]' param-domain-type='range' role='measure' type='quantitative' value='#2016-01-04#'>
+              <calculation class='tableau' formula='#2016-01-04#' />
+              <range max='#2020-04-01#' min='#2016-01-04#' />
+            </column>
+            <column caption='end date' datatype='date' default-format='*m/d/yyyy' name='[Parameter 2]' param-domain-type='range' role='measure' type='quantitative' value='#2020-04-01#'>
+              <calculation class='tableau' formula='#2020-04-01#' />
+              <range max='#2020-04-01#' min='#2016-01-04#' />
+            </column>
+          </datasource-dependencies>
+          <datasource-dependencies datasource='federated.14ttqj919vql5v1a4mjgi1opb86z'>
+            <column aggregation='Sum' caption='Study Period' datatype='integer' name='[Calculation_1311954933860835328]' role='dimension' type='ordinal'>
+              <calculation class='tableau' formula='IF [Date]&gt;=[Parameters].[Parameter 1] and [Date]&lt;=[Parameters].[Parameter 2] THEN 1&#13;&#10;ELSE 0&#13;&#10;END' />
+            </column>
+            <column datatype='date' name='[Date]' role='dimension' type='ordinal' />
+            <column aggregation='None' datatype='integer' name='[Percent change in price (bin)]' role='dimension' type='quantitative'>
+              <calculation class='bin' decimals='-4' formula='[Percent change in price]' peg='0' size='0.0025' />
+            </column>
+            <column datatype='real' name='[Percent change in price]' role='measure' type='quantitative' />
+            <column caption='Company' datatype='string' name='[Table Name]' role='dimension' type='nominal' />
+            <column-instance column='[Percent change in price]' derivation='Count' name='[cnt:Percent change in price:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Calculation_1311954933860835328]' derivation='None' name='[none:Calculation_1311954933860835328:ok]' pivot='key' type='ordinal' />
+            <column-instance column='[Percent change in price (bin)]' derivation='None' name='[none:Percent change in price (bin):qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Table Name]' derivation='None' name='[none:Table Name:nk]' pivot='key' type='nominal' />
+          </datasource-dependencies>
+          <filter class='categorical' column='[federated.14ttqj919vql5v1a4mjgi1opb86z].[none:Calculation_1311954933860835328:ok]'>
+            <groupfilter function='member' level='[none:Calculation_1311954933860835328:ok]' member='1' user:ui-domain='database' user:ui-enumeration='inclusive' user:ui-marker='enumerate' />
+          </filter>
+          <slices>
+            <column>[federated.14ttqj919vql5v1a4mjgi1opb86z].[none:Calculation_1311954933860835328:ok]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='axis'>
+            <format attr='title' class='0' field='[federated.14ttqj919vql5v1a4mjgi1opb86z].[none:Percent change in price (bin):qk]' scope='cols' value='Percent change in price' />
+            <encoding attr='space' class='0' field='[federated.14ttqj919vql5v1a4mjgi1opb86z].[none:Percent change in price (bin):qk]' field-type='quantitative' max='0.10000000000000001' min='-0.10000000000000001' range-type='fixed' scope='cols' type='space' />
+            <format attr='title' class='0' field='[federated.14ttqj919vql5v1a4mjgi1opb86z].[cnt:Percent change in price:qk]' scope='rows' value='' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <mark-sizing custom-mark-size-in-axis-units='1.0' mark-alignment='mark-alignment-left' mark-sizing-setting='marks-scaling-on' use-custom-mark-size='false' />
+            <encodings>
+              <color column='[federated.14ttqj919vql5v1a4mjgi1opb86z].[none:Table Name:nk]' />
+            </encodings>
+          </pane>
+        </panes>
+        <rows>[federated.14ttqj919vql5v1a4mjgi1opb86z].[cnt:Percent change in price:qk]</rows>
+        <cols>[federated.14ttqj919vql5v1a4mjgi1opb86z].[none:Percent change in price (bin):qk]</cols>
+        <show-full-range>
+          <column>[federated.14ttqj919vql5v1a4mjgi1opb86z].[Percent change in price (bin)]</column>
+        </show-full-range>
+      </table>
+      <simple-id uuid='{D50840D8-350D-4181-9ECC-DF906AE0B256}' />
+    </worksheet>
+    <worksheet name='Title'>
+      <repository-location derived-from='https://public.tableau.com/workbooks/Stock_Market_Dashboard_BIVA_Project/Title?rev=' id='Title' path='/workbooks/Stock_Market_Dashboard_BIVA_Project' revision='' />
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='Apple+ (CompanyDB)' name='federated.14ttqj919vql5v1a4mjgi1opb86z' />
+          </datasources>
+          <datasource-dependencies datasource='federated.14ttqj919vql5v1a4mjgi1opb86z'>
+            <column caption='Title' datatype='string' name='[Calculation_1311954933893328908]' role='dimension' type='nominal'>
+              <calculation class='tableau' formula='&quot;Stock Market Dashboard&quot;' />
+            </column>
+            <column-instance column='[Calculation_1311954933893328908]' derivation='None' name='[none:Calculation_1311954933893328908:nk]' pivot='key' type='nominal' />
+          </datasource-dependencies>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='cell'>
+            <format attr='width' value='994' />
+            <format attr='height' value='84' />
+            <format attr='text-align' value='center' />
+          </style-rule>
+          <style-rule element='header'>
+            <format attr='background-color' value='#00000000' />
+          </style-rule>
+          <style-rule element='pane'>
+            <format attr='background-color' value='#00000000' />
+          </style-rule>
+          <style-rule element='table'>
+            <format attr='background-color' value='#00000000' />
+          </style-rule>
+          <style-rule element='worksheet'>
+            <format attr='font-size' value='48' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <text column='[federated.14ttqj919vql5v1a4mjgi1opb86z].[none:Calculation_1311954933893328908:nk]' />
+            </encodings>
+            <customized-label>
+              <formatted-text>
+                <run fontcolor='#ffffff'>&lt;</run>
+                <run fontcolor='#ffffff'>[federated.14ttqj919vql5v1a4mjgi1opb86z].[none:Calculation_1311954933893328908:nk]</run>
+                <run fontcolor='#ffffff'>&gt;</run>
+              </formatted-text>
+            </customized-label>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-show' value='true' />
+                <format attr='mark-labels-cull' value='true' />
+              </style-rule>
+              <style-rule element='pane'>
+                <format attr='minwidth' value='-1' />
+                <format attr='maxwidth' value='-1' />
+                <format attr='minheight' value='-1' />
+                <format attr='maxheight' value='-1' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows />
+        <cols />
+      </table>
+      <simple-id uuid='{29107002-5AD7-4243-B585-5DF7874B0480}' />
+    </worksheet>
+    <worksheet name='Total volume in the period'>
+      <repository-location derived-from='https://public.tableau.com/workbooks/Stock_Market_Dashboard_BIVA_Project/Totalvolumeintheperiod?rev=' id='Totalvolumeintheperiod' path='/workbooks/Stock_Market_Dashboard_BIVA_Project' revision='' />
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='Apple+ (CompanyDB)' name='federated.14ttqj919vql5v1a4mjgi1opb86z' />
+            <datasource name='Parameters' />
+          </datasources>
+          <datasource-dependencies datasource='Parameters'>
+            <column caption='start date' datatype='date' default-format='*m/d/yyyy' name='[Parameter 1]' param-domain-type='range' role='measure' type='quantitative' value='#2016-01-04#'>
+              <calculation class='tableau' formula='#2016-01-04#' />
+              <range max='#2020-04-01#' min='#2016-01-04#' />
+            </column>
+            <column caption='end date' datatype='date' default-format='*m/d/yyyy' name='[Parameter 2]' param-domain-type='range' role='measure' type='quantitative' value='#2020-04-01#'>
+              <calculation class='tableau' formula='#2020-04-01#' />
+              <range max='#2020-04-01#' min='#2016-01-04#' />
+            </column>
+          </datasource-dependencies>
+          <datasource-dependencies datasource='federated.14ttqj919vql5v1a4mjgi1opb86z'>
+            <column aggregation='Sum' caption='Study Period' datatype='integer' name='[Calculation_1311954933860835328]' role='dimension' type='ordinal'>
+              <calculation class='tableau' formula='IF [Date]&gt;=[Parameters].[Parameter 1] and [Date]&lt;=[Parameters].[Parameter 2] THEN 1&#13;&#10;ELSE 0&#13;&#10;END' />
+            </column>
+            <column caption='Total volume in the period text' datatype='string' name='[Calculation_1311954933892608011]' role='dimension' type='nominal'>
+              <calculation class='tableau' formula='&quot;Total volume in the period:&quot;' />
+            </column>
+            <column datatype='date' name='[Date]' role='dimension' type='ordinal' />
+            <column datatype='integer' name='[Volume]' role='measure' type='quantitative' />
+            <column-instance column='[Calculation_1311954933860835328]' derivation='None' name='[none:Calculation_1311954933860835328:ok]' pivot='key' type='ordinal' />
+            <column-instance column='[Calculation_1311954933892608011]' derivation='None' name='[none:Calculation_1311954933892608011:nk]' pivot='key' type='nominal' />
+            <column-instance column='[Volume]' derivation='Sum' name='[sum:Volume:qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <filter class='categorical' column='[federated.14ttqj919vql5v1a4mjgi1opb86z].[none:Calculation_1311954933860835328:ok]'>
+            <groupfilter function='member' level='[none:Calculation_1311954933860835328:ok]' member='1' user:ui-domain='database' user:ui-enumeration='inclusive' user:ui-marker='enumerate' />
+          </filter>
+          <slices>
+            <column>[federated.14ttqj919vql5v1a4mjgi1opb86z].[none:Calculation_1311954933860835328:ok]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='cell'>
+            <format attr='width' value='147' />
+            <format attr='text-align' value='center' />
+            <format attr='height' value='69' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <text column='[federated.14ttqj919vql5v1a4mjgi1opb86z].[none:Calculation_1311954933892608011:nk]' />
+              <text column='[federated.14ttqj919vql5v1a4mjgi1opb86z].[sum:Volume:qk]' />
+            </encodings>
+            <customized-label>
+              <formatted-text>
+                <run fontsize='10'><![CDATA[<[federated.14ttqj919vql5v1a4mjgi1opb86z].[none:Calculation_1311954933892608011:nk]>]]></run>
+                <run>Æ&#10;</run>
+                <run fontsize='9'><![CDATA[<[federated.14ttqj919vql5v1a4mjgi1opb86z].[sum:Volume:qk]>]]></run>
+              </formatted-text>
+            </customized-label>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-cull' value='true' />
+                <format attr='mark-labels-show' value='true' />
+              </style-rule>
+              <style-rule element='pane'>
+                <format attr='minwidth' value='-1' />
+                <format attr='maxwidth' value='-1' />
+                <format attr='minheight' value='-1' />
+                <format attr='maxheight' value='-1' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows />
+        <cols />
+      </table>
+      <simple-id uuid='{0ABF3995-7873-4A37-B118-0BA21E34A0F3}' />
+    </worksheet>
+    <worksheet name='Volume'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run fontalignment='1'>&lt;Sheet Name&gt;</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <repository-location derived-from='https://public.tableau.com/workbooks/Stock_Market_Dashboard_BIVA_Project/Volume?rev=' id='Volume' path='/workbooks/Stock_Market_Dashboard_BIVA_Project' revision='' />
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='Apple+ (CompanyDB)' name='federated.14ttqj919vql5v1a4mjgi1opb86z' />
+            <datasource name='Parameters' />
+          </datasources>
+          <datasource-dependencies datasource='Parameters'>
+            <column caption='start date' datatype='date' default-format='*m/d/yyyy' name='[Parameter 1]' param-domain-type='range' role='measure' type='quantitative' value='#2016-01-04#'>
+              <calculation class='tableau' formula='#2016-01-04#' />
+              <range max='#2020-04-01#' min='#2016-01-04#' />
+            </column>
+            <column caption='end date' datatype='date' default-format='*m/d/yyyy' name='[Parameter 2]' param-domain-type='range' role='measure' type='quantitative' value='#2020-04-01#'>
+              <calculation class='tableau' formula='#2020-04-01#' />
+              <range max='#2020-04-01#' min='#2016-01-04#' />
+            </column>
+          </datasource-dependencies>
+          <datasource-dependencies datasource='federated.14ttqj919vql5v1a4mjgi1opb86z'>
+            <column aggregation='Sum' caption='Study Period' datatype='integer' name='[Calculation_1311954933860835328]' role='dimension' type='ordinal'>
+              <calculation class='tableau' formula='IF [Date]&gt;=[Parameters].[Parameter 1] and [Date]&lt;=[Parameters].[Parameter 2] THEN 1&#13;&#10;ELSE 0&#13;&#10;END' />
+            </column>
+            <column datatype='date' name='[Date]' role='dimension' type='ordinal' />
+            <column caption='Company' datatype='string' name='[Table Name]' role='dimension' type='nominal' />
+            <column datatype='integer' name='[Volume]' role='measure' type='quantitative' />
+            <column-instance column='[Calculation_1311954933860835328]' derivation='None' name='[none:Calculation_1311954933860835328:ok]' pivot='key' type='ordinal' />
+            <column-instance column='[Date]' derivation='None' name='[none:Date:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Table Name]' derivation='None' name='[none:Table Name:nk]' pivot='key' type='nominal' />
+            <column-instance column='[Volume]' derivation='Sum' name='[sum:Volume:qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <filter class='categorical' column='[federated.14ttqj919vql5v1a4mjgi1opb86z].[none:Calculation_1311954933860835328:ok]'>
+            <groupfilter function='member' level='[none:Calculation_1311954933860835328:ok]' member='1' user:ui-domain='database' user:ui-enumeration='inclusive' user:ui-marker='enumerate' />
+          </filter>
+          <slices>
+            <column>[federated.14ttqj919vql5v1a4mjgi1opb86z].[none:Calculation_1311954933860835328:ok]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='axis'>
+            <format attr='title' class='0' field='[federated.14ttqj919vql5v1a4mjgi1opb86z].[sum:Volume:qk]' scope='rows' value='' />
+            <format attr='title' class='0' field='[federated.14ttqj919vql5v1a4mjgi1opb86z].[none:Date:qk]' scope='cols' value='' />
+          </style-rule>
+          <style-rule element='data-highlighter-title'>
+            <format attr='title' field='[federated.14ttqj919vql5v1a4mjgi1opb86z].[none:Table Name:nk]' value='Company'>
+              <formatted-text>
+                <run fontalignment='1'>Company</run>
+              </formatted-text>
+            </format>
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <color column='[federated.14ttqj919vql5v1a4mjgi1opb86z].[none:Table Name:nk]' />
+            </encodings>
+          </pane>
+        </panes>
+        <rows>[federated.14ttqj919vql5v1a4mjgi1opb86z].[sum:Volume:qk]</rows>
+        <cols>[federated.14ttqj919vql5v1a4mjgi1opb86z].[none:Date:qk]</cols>
+      </table>
+      <simple-id uuid='{EDBAB24C-1BD7-4D29-A436-90AF7C888305}' />
+    </worksheet>
+  </worksheets>
+  <dashboards>
+    <dashboard _.fcp.AccessibleZoneTabOrder.true...enable-sort-zone-taborder='true' name='Dashboard 1'>
+      <repository-location derived-from='https://public.tableau.com/workbooks/Stock_Market_Dashboard_BIVA_Project/Dashboard1?rev=' id='Dashboard1' path='/workbooks/Stock_Market_Dashboard_BIVA_Project' revision='' />
+      <style>
+        <style-rule element='table'>
+          <format attr='background-color' value='#666666' />
+        </style-rule>
+      </style>
+      <size maxheight='1050' maxwidth='1850' minheight='1050' minwidth='1850' sizing-mode='fixed' />
+      <datasources>
+        <datasource name='Parameters' />
+        <datasource caption='Apple+ (CompanyDB)' name='federated.14ttqj919vql5v1a4mjgi1opb86z' />
+      </datasources>
+      <datasource-dependencies datasource='Parameters'>
+        <column caption='start date' datatype='date' default-format='*m/d/yyyy' name='[Parameter 1]' param-domain-type='range' role='measure' type='quantitative' value='#2016-01-04#'>
+          <calculation class='tableau' formula='#2016-01-04#' />
+          <range max='#2020-04-01#' min='#2016-01-04#' />
+        </column>
+        <column caption='end date' datatype='date' default-format='*m/d/yyyy' name='[Parameter 2]' param-domain-type='range' role='measure' type='quantitative' value='#2020-04-01#'>
+          <calculation class='tableau' formula='#2020-04-01#' />
+          <range max='#2020-04-01#' min='#2016-01-04#' />
+        </column>
+      </datasource-dependencies>
+      <datasource-dependencies datasource='federated.14ttqj919vql5v1a4mjgi1opb86z'>
+        <column caption='Company' datatype='string' name='[Table Name]' role='dimension' type='nominal' />
+        <column-instance column='[Table Name]' derivation='None' name='[none:Table Name:nk]' pivot='key' type='nominal' />
+      </datasource-dependencies>
+      <zones>
+        <zone h='100000' id='4' type-v2='layout-basic' w='100000' x='0' y='0'>
+          <zone h='35619' id='3' type-v2='empty' w='49568' x='50000' y='24952'>
+            <zone-style>
+              <format attr='border-color' value='#000000' />
+              <format attr='border-style' value='none' />
+              <format attr='border-width' value='0' />
+              <format attr='margin' value='15' />
+              <format attr='background-color' value='#ffffff' />
+            </zone-style>
+          </zone>
+          <zone h='38667' id='5' type-v2='empty' w='49568' x='50000' y='60571'>
+            <zone-style>
+              <format attr='border-color' value='#000000' />
+              <format attr='border-style' value='none' />
+              <format attr='border-width' value='0' />
+              <format attr='margin' value='15' />
+              <format attr='background-color' value='#ffffff' />
+            </zone-style>
+          </zone>
+          <zone h='38667' id='6' type-v2='empty' w='49568' x='432' y='60571'>
+            <zone-style>
+              <format attr='border-color' value='#000000' />
+              <format attr='border-style' value='none' />
+              <format attr='border-width' value='0' />
+              <format attr='margin' value='15' />
+              <format attr='background-color' value='#ffffff' />
+            </zone-style>
+          </zone>
+          <zone h='35619' id='7' type-v2='empty' w='49568' x='432' y='24952'>
+            <zone-style>
+              <format attr='border-color' value='#000000' />
+              <format attr='border-style' value='none' />
+              <format attr='border-width' value='0' />
+              <format attr='margin' value='15' />
+              <format attr='background-color' value='#ffffff' />
+            </zone-style>
+          </zone>
+          <zone h='12762' id='8' type-v2='empty' w='99136' x='432' y='762'>
+            <zone-style>
+              <format attr='border-color' value='#000000' />
+              <format attr='border-style' value='none' />
+              <format attr='border-width' value='0' />
+              <format attr='margin' value='15' />
+              <format attr='background-color' value='#333333b4' />
+            </zone-style>
+          </zone>
+          <zone h='11428' id='9' type-v2='empty' w='12392' x='37608' y='13524'>
+            <zone-style>
+              <format attr='border-color' value='#000000' />
+              <format attr='border-style' value='none' />
+              <format attr='border-width' value='0' />
+              <format attr='margin' value='15' />
+              <format attr='background-color' value='#ffffff' />
+            </zone-style>
+          </zone>
+          <zone h='11428' id='10' type-v2='empty' w='12392' x='87176' y='13524'>
+            <zone-style>
+              <format attr='border-color' value='#000000' />
+              <format attr='border-style' value='none' />
+              <format attr='border-width' value='0' />
+              <format attr='margin' value='15' />
+              <format attr='background-color' value='#ffffff' />
+            </zone-style>
+          </zone>
+          <zone h='11428' id='11' type-v2='empty' w='12392' x='432' y='13524'>
+            <zone-style>
+              <format attr='border-color' value='#000000' />
+              <format attr='border-style' value='none' />
+              <format attr='border-width' value='0' />
+              <format attr='margin' value='15' />
+              <format attr='background-color' value='#ffffff' />
+            </zone-style>
+          </zone>
+          <zone h='11428' id='12' type-v2='empty' w='12392' x='12824' y='13524'>
+            <zone-style>
+              <format attr='border-color' value='#000000' />
+              <format attr='border-style' value='none' />
+              <format attr='border-width' value='0' />
+              <format attr='margin' value='15' />
+              <format attr='background-color' value='#ffffff' />
+            </zone-style>
+          </zone>
+          <zone h='11428' id='13' type-v2='empty' w='12392' x='25216' y='13524'>
+            <zone-style>
+              <format attr='border-color' value='#000000' />
+              <format attr='border-style' value='none' />
+              <format attr='border-width' value='0' />
+              <format attr='margin' value='15' />
+              <format attr='background-color' value='#ffffff' />
+            </zone-style>
+          </zone>
+          <zone h='11428' id='14' type-v2='empty' w='12392' x='62392' y='13524'>
+            <zone-style>
+              <format attr='border-color' value='#000000' />
+              <format attr='border-style' value='none' />
+              <format attr='border-width' value='0' />
+              <format attr='margin' value='15' />
+              <format attr='background-color' value='#ffffff' />
+            </zone-style>
+          </zone>
+          <zone h='11428' id='15' type-v2='empty' w='12392' x='50000' y='13524'>
+            <zone-style>
+              <format attr='border-color' value='#000000' />
+              <format attr='border-style' value='none' />
+              <format attr='border-width' value='0' />
+              <format attr='margin' value='15' />
+              <format attr='background-color' value='#ffffff' />
+            </zone-style>
+          </zone>
+          <zone h='11428' id='16' type-v2='empty' w='12392' x='74784' y='13524'>
+            <zone-style>
+              <format attr='border-color' value='#000000' />
+              <format attr='border-style' value='none' />
+              <format attr='border-width' value='0' />
+              <format attr='margin' value='15' />
+              <format attr='background-color' value='#ffffff' />
+            </zone-style>
+          </zone>
+          <zone-style>
+            <format attr='border-color' value='#000000' />
+            <format attr='border-style' value='none' />
+            <format attr='border-width' value='0' />
+            <format attr='margin' value='8' />
+          </zone-style>
+        </zone>
+        <zone h='32190' id='17' name='Volume' w='47676' x='1351' y='26571' />
+        <zone h='13238' id='18' name='Volume' pane-specification-id='0' param='[federated.14ttqj919vql5v1a4mjgi1opb86z].[none:Table Name:nk]' show-title='false' type-v2='color' w='5189' x='43730' y='26857' />
+        <zone custom-title='true' h='6476' id='19' mode='slider' param='[Parameters].[Parameter 1]' type-v2='paramctrl' w='9676' x='1784' y='16190'>
+          <formatted-text>
+            <run fontalignment='1'>Start date</run>
+          </formatted-text>
+        </zone>
+        <zone custom-title='true' h='6571' id='20' mode='slider' param='[Parameters].[Parameter 2]' type-v2='paramctrl' w='9514' x='14216' y='16190'>
+          <formatted-text>
+            <run fontalignment='1'>End date</run>
+          </formatted-text>
+        </zone>
+        <zone h='5429' id='21' name='Volume' param='[federated.14ttqj919vql5v1a4mjgi1opb86z].[none:Table Name:nk]' type-v2='highlighter' w='9568' x='26595' y='16571' />
+        <zone h='35429' id='22' name='Price percent change' w='47622' x='1405' y='62190' />
+        <zone h='12762' id='23' name='Price percent change' pane-specification-id='0' param='[federated.14ttqj919vql5v1a4mjgi1opb86z].[none:Table Name:nk]' show-title='false' type-v2='color' w='4865' x='44000' y='62762' />
+        <zone h='35333' id='24' name='Moving Average - open price' w='47676' x='50919' y='62190' />
+        <zone h='3048' id='25' mode='dropdown' name='Moving Average - open price' param='[federated.14ttqj919vql5v1a4mjgi1opb86z].[none:Table Name:nk]' show-all='false' show-title='false' type-v2='filter' w='8649' x='89676' y='62571' />
+        <zone h='6762' id='26' name='Moving Average - open price' pane-specification-id='0' param='[federated.14ttqj919vql5v1a4mjgi1opb86z].[:Measure Names]' show-title='false' type-v2='color' w='4378' x='54865' y='63619' />
+        <zone h='32476' id='27' name='Detailed Price table' show-title='false' w='25081' x='50865' y='26476' />
+        <zone h='32476' id='28' name='Detailed Volume Table ' show-title='false' w='22703' x='75946' y='26476' />
+        <zone h='7810' id='29' name='Last day' show-title='false' w='10486' x='38541' y='15048' />
+        <zone h='7619' id='30' name='Last day total volume' show-title='false' w='10811' x='50811' y='15524' />
+        <zone h='6667' id='31' name='Lowest price in the period' show-title='false' w='8000' x='64541' y='16000' />
+        <zone h='6476' id='32' name='Highest price in the period' show-title='false' w='9514' x='76378' y='16095' />
+        <zone h='7333' id='33' name='Total volume in the period' show-title='false' w='8162' x='89405' y='15810' />
+        <zone h='8952' id='34' name='Title' show-title='false' w='53892' x='22811' y='2857' />
+        <zone h='8762' id='35' is-scaled='1' param='Image/Apple logo.png' type-v2='bitmap' w='5297' x='2108' y='2667' />
+        <zone h='8762' id='36' is-scaled='1' param='Image/Facebook logo.png' type-v2='bitmap' w='5892' x='8324' y='2667' />
+        <zone h='8667' id='37' is-scaled='1' param='Image/Google logo.png' type-v2='bitmap' w='5351' x='15351' y='2667' />
+        <zone h='8667' id='38' is-scaled='1' param='Image/Nvidia logo.png' type-v2='bitmap' w='6757' x='78649' y='2762' />
+        <zone h='8381' id='39' is-scaled='1' param='Image/Tesla logo.png' type-v2='bitmap' w='6595' x='85676' y='2762' />
+        <zone h='8286' id='40' is-scaled='1' param='Image/Twitter logo.png' type-v2='bitmap' w='5189' x='92649' y='2667' />
+      </zones>
+      <devicelayouts>
+        <devicelayout auto-generated='true' name='Phone'>
+          <size maxheight='3050' minheight='3050' sizing-mode='vscroll' />
+          <zones>
+            <zone h='100000' id='46' type-v2='layout-basic' w='100000' x='0' y='0'>
+              <zone h='98476' id='45' param='vert' type-v2='layout-flow' w='99136' x='432' y='762'>
+                <zone fixed-size='92' h='8762' id='35' is-fixed='true' is-scaled='1' param='Image/Apple logo.png' type-v2='bitmap' w='5297' x='2108' y='2667'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='92' h='8762' id='36' is-fixed='true' is-scaled='1' param='Image/Facebook logo.png' type-v2='bitmap' w='5892' x='8324' y='2667'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='91' h='8667' id='37' is-fixed='true' is-scaled='1' param='Image/Google logo.png' type-v2='bitmap' w='5351' x='15351' y='2667'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='87' h='8286' id='40' is-fixed='true' is-scaled='1' param='Image/Twitter logo.png' type-v2='bitmap' w='5189' x='92649' y='2667'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='91' h='8667' id='38' is-fixed='true' is-scaled='1' param='Image/Nvidia logo.png' type-v2='bitmap' w='6757' x='78649' y='2762'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='88' h='8381' id='39' is-fixed='true' is-scaled='1' param='Image/Tesla logo.png' type-v2='bitmap' w='6595' x='85676' y='2762'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='94' h='8952' id='34' is-fixed='true' name='Title' show-title='false' w='53892' x='22811' y='2857'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='82' h='7810' id='29' is-fixed='true' name='Last day' show-title='false' w='10486' x='38541' y='15048'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='80' h='7619' id='30' is-fixed='true' name='Last day total volume' show-title='false' w='10811' x='50811' y='15524'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='77' h='7333' id='33' is-fixed='true' name='Total volume in the period' show-title='false' w='8162' x='89405' y='15810'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='70' h='6667' id='31' is-fixed='true' name='Lowest price in the period' show-title='false' w='8000' x='64541' y='16000'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='68' h='6476' id='32' is-fixed='true' name='Highest price in the period' show-title='false' w='9514' x='76378' y='16095'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone custom-title='true' h='6476' id='19' mode='slider' param='[Parameters].[Parameter 1]' type-v2='paramctrl' w='9676' x='1784' y='16190'>
+                  <formatted-text>
+                    <run fontalignment='1'>Start date</run>
+                  </formatted-text>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone custom-title='true' h='6571' id='20' mode='slider' param='[Parameters].[Parameter 2]' type-v2='paramctrl' w='9514' x='14216' y='16190'>
+                  <formatted-text>
+                    <run fontalignment='1'>End date</run>
+                  </formatted-text>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='280' h='32476' id='27' is-fixed='true' name='Detailed Price table' show-title='false' w='25081' x='50865' y='26476'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='280' h='32476' id='28' is-fixed='true' name='Detailed Volume Table ' show-title='false' w='22703' x='75946' y='26476'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone h='5429' id='21' name='Volume' param='[federated.14ttqj919vql5v1a4mjgi1opb86z].[none:Table Name:nk]' type-v2='highlighter' w='9568' x='26595' y='16571'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='280' h='32190' id='17' is-fixed='true' name='Volume' w='47676' x='1351' y='26571'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone h='13238' id='18' name='Volume' pane-specification-id='0' param='[federated.14ttqj919vql5v1a4mjgi1opb86z].[none:Table Name:nk]' show-title='false' type-v2='color' w='5189' x='43730' y='26857'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='280' h='35429' id='22' is-fixed='true' name='Price percent change' w='47622' x='1405' y='62190'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone h='12762' id='23' name='Price percent change' pane-specification-id='0' param='[federated.14ttqj919vql5v1a4mjgi1opb86z].[none:Table Name:nk]' show-title='false' type-v2='color' w='4865' x='44000' y='62762'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone h='3048' id='25' mode='dropdown' name='Moving Average - open price' param='[federated.14ttqj919vql5v1a4mjgi1opb86z].[none:Table Name:nk]' show-all='false' show-title='false' type-v2='filter' w='8649' x='89676' y='62571'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='280' h='35333' id='24' is-fixed='true' name='Moving Average - open price' w='47676' x='50919' y='62190'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone h='6762' id='26' name='Moving Average - open price' pane-specification-id='0' param='[federated.14ttqj919vql5v1a4mjgi1opb86z].[:Measure Names]' show-title='false' type-v2='color' w='4378' x='54865' y='63619'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+              </zone>
+              <zone-style>
+                <format attr='border-color' value='#000000' />
+                <format attr='border-style' value='none' />
+                <format attr='border-width' value='0' />
+                <format attr='margin' value='8' />
+              </zone-style>
+            </zone>
+          </zones>
+        </devicelayout>
+      </devicelayouts>
+      <simple-id uuid='{6DB3B55F-8F1A-4584-B99A-6A653599F687}' />
+    </dashboard>
+  </dashboards>
+  <windows source-height='37'>
+    <window class='worksheet' name='Volume'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card mode='slider' param='[Parameters].[Parameter 1]' type='parameter' />
+            <card mode='slider' param='[Parameters].[Parameter 2]' type='parameter' />
+            <card pane-specification-id='0' param='[federated.14ttqj919vql5v1a4mjgi1opb86z].[none:Table Name:nk]' type='color' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <highlight>
+          <color-one-way>
+            <field>[federated.14ttqj919vql5v1a4mjgi1opb86z].[none:Calculation_1311954933860835328:ok]</field>
+            <field>[federated.14ttqj919vql5v1a4mjgi1opb86z].[none:Table Name:nk]</field>
+            <field>[federated.14ttqj919vql5v1a4mjgi1opb86z].[yr:Date:ok]</field>
+          </color-one-way>
+        </highlight>
+      </viewpoint>
+      <simple-id uuid='{8B913582-E113-49C4-BB3A-35D27BBB257E}' />
+    </window>
+    <window class='worksheet' name='Price percent change'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card pane-specification-id='0' param='[federated.14ttqj919vql5v1a4mjgi1opb86z].[none:Table Name:nk]' type='color' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <highlight>
+          <color-one-way>
+            <field>[federated.14ttqj919vql5v1a4mjgi1opb86z].[none:Calculation_1311954933860835328:ok]</field>
+            <field>[federated.14ttqj919vql5v1a4mjgi1opb86z].[none:Table Name:nk]</field>
+          </color-one-way>
+        </highlight>
+      </viewpoint>
+      <simple-id uuid='{F1059BC3-48FF-4772-9BAD-64B808345E50}' />
+    </window>
+    <window class='worksheet' name='Moving Average - open price'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+            <card type='measures' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card mode='dropdown' param='[federated.14ttqj919vql5v1a4mjgi1opb86z].[none:Table Name:nk]' show-all='false' type='filter' />
+            <card pane-specification-id='0' param='[federated.14ttqj919vql5v1a4mjgi1opb86z].[:Measure Names]' type='color' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <highlight>
+          <color-one-way>
+            <field>[federated.14ttqj919vql5v1a4mjgi1opb86z].[:Measure Names]</field>
+            <field>[federated.14ttqj919vql5v1a4mjgi1opb86z].[none:Table Name:nk]</field>
+            <field>[federated.14ttqj919vql5v1a4mjgi1opb86z].[yr:Date:ok]</field>
+          </color-one-way>
+        </highlight>
+      </viewpoint>
+      <simple-id uuid='{2B6576D2-7832-49F7-A744-5FF007EB0CE0}' />
+    </window>
+    <window class='worksheet' name='Detailed Price table'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card mode='slider' param='[Parameters].[Parameter 1]' type='parameter' />
+            <card mode='slider' param='[Parameters].[Parameter 2]' type='parameter' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <highlight>
+          <color-one-way>
+            <field>[federated.14ttqj919vql5v1a4mjgi1opb86z].[:Measure Names]</field>
+            <field>[federated.14ttqj919vql5v1a4mjgi1opb86z].[none:Calculation_1311954933860835328:ok]</field>
+            <field>[federated.14ttqj919vql5v1a4mjgi1opb86z].[none:Calculation_1311954933867307009:ok]</field>
+            <field>[federated.14ttqj919vql5v1a4mjgi1opb86z].[none:Calculation_1311954933870096386:nk]</field>
+            <field>[federated.14ttqj919vql5v1a4mjgi1opb86z].[none:Calculation_1311954933870833667:nk]</field>
+            <field>[federated.14ttqj919vql5v1a4mjgi1opb86z].[none:Table Name:nk]</field>
+          </color-one-way>
+        </highlight>
+      </viewpoint>
+      <simple-id uuid='{25EE9F82-9D4E-48B9-8B58-42A9E00BE1E4}' />
+    </window>
+    <window class='worksheet' name='Detailed Volume Table '>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card mode='slider' param='[Parameters].[Parameter 1]' type='parameter' />
+            <card mode='slider' param='[Parameters].[Parameter 2]' type='parameter' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <highlight>
+          <color-one-way>
+            <field>[federated.14ttqj919vql5v1a4mjgi1opb86z].[:Measure Names]</field>
+            <field>[federated.14ttqj919vql5v1a4mjgi1opb86z].[none:Calculation_1311954933860835328:ok]</field>
+            <field>[federated.14ttqj919vql5v1a4mjgi1opb86z].[none:Calculation_1311954933867307009:ok]</field>
+            <field>[federated.14ttqj919vql5v1a4mjgi1opb86z].[none:Down price (copy)_1311954933885440004:nk]</field>
+            <field>[federated.14ttqj919vql5v1a4mjgi1opb86z].[none:Table Name:nk]</field>
+            <field>[federated.14ttqj919vql5v1a4mjgi1opb86z].[none:Upper price (copy)_1311954933885562885:nk]</field>
+          </color-one-way>
+        </highlight>
+      </viewpoint>
+      <simple-id uuid='{5C542B9A-C72B-42A4-BB5F-F1BFA8ED07D4}' />
+    </window>
+    <window class='worksheet' name='Last day'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <highlight>
+          <color-one-way>
+            <field>[federated.14ttqj919vql5v1a4mjgi1opb86z].[none:Calculation_1311954933887356934:nk]</field>
+            <field>[federated.14ttqj919vql5v1a4mjgi1opb86z].[usr:Calculation_1311954933887614983:ok]</field>
+          </color-one-way>
+        </highlight>
+      </viewpoint>
+      <simple-id uuid='{978362BA-0796-47FF-8966-02C97D289256}' />
+    </window>
+    <window class='worksheet' name='Last day total volume'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <highlight>
+          <color-one-way>
+            <field>[federated.14ttqj919vql5v1a4mjgi1opb86z].[none:Calculation_1311954933867307009:ok]</field>
+            <field>[federated.14ttqj919vql5v1a4mjgi1opb86z].[none:Calculation_1311954933887356934:nk]</field>
+            <field>[federated.14ttqj919vql5v1a4mjgi1opb86z].[none:Calculation_1311954933889515528:nk]</field>
+            <field>[federated.14ttqj919vql5v1a4mjgi1opb86z].[usr:Calculation_1311954933887614983:ok]</field>
+          </color-one-way>
+        </highlight>
+      </viewpoint>
+      <simple-id uuid='{D8ADF5C3-0A05-4BFE-AC96-276A7C296DFB}' />
+    </window>
+    <window class='worksheet' name='Lowest price in the period'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <highlight>
+          <color-one-way>
+            <field>[federated.14ttqj919vql5v1a4mjgi1opb86z].[none:Calculation_1311954933860835328:ok]</field>
+            <field>[federated.14ttqj919vql5v1a4mjgi1opb86z].[none:Calculation_1311954933890588681:nk]</field>
+          </color-one-way>
+        </highlight>
+      </viewpoint>
+      <simple-id uuid='{48EBD5AD-AB82-4DE5-B799-20419D7CFA4D}' />
+    </window>
+    <window class='worksheet' name='Highest price in the period'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <highlight>
+          <color-one-way>
+            <field>[federated.14ttqj919vql5v1a4mjgi1opb86z].[none:Calculation_1311954933860835328:ok]</field>
+            <field>[federated.14ttqj919vql5v1a4mjgi1opb86z].[none:Calculation_1311954933890588681:nk]</field>
+            <field>[federated.14ttqj919vql5v1a4mjgi1opb86z].[none:Calculation_1311954933891833866:nk]</field>
+          </color-one-way>
+        </highlight>
+      </viewpoint>
+      <simple-id uuid='{95CBEEBE-A219-4947-A38A-4327F95BB51E}' />
+    </window>
+    <window class='worksheet' name='Total volume in the period'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <highlight>
+          <color-one-way>
+            <field>[federated.14ttqj919vql5v1a4mjgi1opb86z].[none:Calculation_1311954933860835328:ok]</field>
+            <field>[federated.14ttqj919vql5v1a4mjgi1opb86z].[none:Calculation_1311954933890588681:nk]</field>
+            <field>[federated.14ttqj919vql5v1a4mjgi1opb86z].[none:Calculation_1311954933891833866:nk]</field>
+            <field>[federated.14ttqj919vql5v1a4mjgi1opb86z].[none:Calculation_1311954933892608011:nk]</field>
+          </color-one-way>
+        </highlight>
+      </viewpoint>
+      <simple-id uuid='{68816B00-C471-4863-8269-24123A1C00EB}' />
+    </window>
+    <window class='worksheet' name='Title'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <selection-collection>
+          <tuple-selection>
+            <tuple-reference>
+              <tuple-descriptor>
+                <pane-descriptor>
+                  <x-fields />
+                  <y-fields />
+                </pane-descriptor>
+                <columns>
+                  <field>[federated.14ttqj919vql5v1a4mjgi1opb86z].[none:Calculation_1311954933893328908:nk]</field>
+                </columns>
+              </tuple-descriptor>
+              <tuple>
+                <value>&quot;Stock Market Dashboard&quot;</value>
+              </tuple>
+            </tuple-reference>
+          </tuple-selection>
+        </selection-collection>
+        <highlight>
+          <color-one-way>
+            <field>[federated.14ttqj919vql5v1a4mjgi1opb86z].[none:Calculation_1311954933893328908:nk]</field>
+          </color-one-way>
+        </highlight>
+      </viewpoint>
+      <simple-id uuid='{F7640C71-F61C-4E64-8905-FECB9C1694F6}' />
+    </window>
+    <window class='dashboard' maximized='true' name='Dashboard 1'>
+      <viewpoints>
+        <viewpoint name='Detailed Price table'>
+          <zoom type='entire-view' />
+        </viewpoint>
+        <viewpoint name='Detailed Volume Table '>
+          <zoom type='entire-view' />
+        </viewpoint>
+        <viewpoint name='Highest price in the period' />
+        <viewpoint name='Last day' />
+        <viewpoint name='Last day total volume' />
+        <viewpoint name='Lowest price in the period' />
+        <viewpoint name='Moving Average - open price'>
+          <zoom type='entire-view' />
+          <highlight>
+            <color-one-way>
+              <field>[federated.14ttqj919vql5v1a4mjgi1opb86z].[:Measure Names]</field>
+            </color-one-way>
+          </highlight>
+        </viewpoint>
+        <viewpoint name='Price percent change'>
+          <zoom type='entire-view' />
+          <highlight field='[federated.14ttqj919vql5v1a4mjgi1opb86z].[none:Table Name:nk]'>
+            <bucket-selection />
+          </highlight>
+        </viewpoint>
+        <viewpoint name='Title' />
+        <viewpoint name='Total volume in the period' />
+        <viewpoint name='Volume'>
+          <zoom type='entire-view' />
+          <highlight field='[federated.14ttqj919vql5v1a4mjgi1opb86z].[none:Table Name:nk]' type='highlight'>
+            <bucket-selection />
+          </highlight>
+        </viewpoint>
+      </viewpoints>
+      <active id='25' />
+      <simple-id uuid='{6178132C-D210-47FC-8975-A14D6191CFAF}' />
+    </window>
+  </windows>
+</workbook>
