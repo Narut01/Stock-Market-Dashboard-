@@ -20,6 +20,11 @@ The dashboard includes the following features:
 - **Performance Metrics:** Key metrics such as price changes, volume, and market capitalization.
 - **Comparative Analysis:** Compare the performance of multiple stocks or indices side by side.
 - **Interactive Filters:** Filter data by date range, stock symbol, sector, and more for customized views.
+- 
+## Dashboard Screenshot
+Here is a preview of the Stock Market Dashboard:
+
+![Stock Market Dashboard](images/dashboard.png)
 
 ## Dataset
 The dashboard utilizes a dataset that includes various stock market metrics, such as:
